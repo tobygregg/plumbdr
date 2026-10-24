@@ -1,0 +1,191 @@
+/* ============================================================
+   The Plumb Doctor — source styles
+   Edit this file + index.html, then run `npm run build`
+   to regenerate assets/css/styles.css
+   ============================================================ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Self-hosted fonts (assets/fonts, OFL licensed) ---------- */
+@font-face { font-family: 'Bricolage Grotesque'; font-weight: 600; font-display: swap; src: url('../fonts/bricolage-grotesque-latin-600-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Bricolage Grotesque'; font-weight: 700; font-display: swap; src: url('../fonts/bricolage-grotesque-latin-700-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Bricolage Grotesque'; font-weight: 800; font-display: swap; src: url('../fonts/bricolage-grotesque-latin-800-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Figtree'; font-weight: 400; font-display: swap; src: url('../fonts/figtree-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Figtree'; font-weight: 500; font-display: swap; src: url('../fonts/figtree-latin-500-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Figtree'; font-weight: 600; font-display: swap; src: url('../fonts/figtree-latin-600-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Figtree'; font-weight: 700; font-display: swap; src: url('../fonts/figtree-latin-700-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Caveat'; font-weight: 700; font-display: swap; src: url('../fonts/caveat-latin-700-normal.woff2') format('woff2'); }
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-tap-highlight-color: transparent; }
+  body { @apply bg-chart font-sans text-navy antialiased; }
+  ::selection { background: #ffc93c; color: #073556; }
+  :focus-visible { outline: 3px solid #ffc93c; outline-offset: 3px; border-radius: 8px; }
+  section[id] { scroll-margin-top: 76px; }
+  img { -webkit-user-drag: none; }
+  p, li, h1, h2, h3 { text-wrap: pretty; }
+}
+
+@layer components {
+  .wrap { @apply mx-auto w-full max-w-site px-4 sm:px-6 lg:px-8; }
+
+  /* ---------- Buttons: chunky, pressable, like a big reset button ---------- */
+  .btn {
+    @apply relative inline-flex min-h-[52px] select-none items-center justify-center gap-2.5 rounded-2xl px-6 font-display text-[17px] font-bold transition-[transform,box-shadow,background-color] duration-150;
+  }
+  .btn:active { transform: translateY(3px); box-shadow: none; }
+  .btn-sunny { @apply btn bg-sunny text-navy shadow-btn hover:bg-sunny-light; }
+  .btn-navy { @apply btn bg-navy text-white shadow-btn-navy hover:bg-navy-700; }
+  .btn-outline { @apply btn border-2 border-navy/20 bg-white/70 text-navy hover:border-navy; }
+  .btn-outline-light { @apply btn border-2 border-white/25 text-white hover:border-white; }
+
+  /* ---------- Type ---------- */
+  .h-section { @apply font-display text-[2.1rem] font-extrabold leading-[1.02] tracking-[-0.02em] sm:text-[2.75rem] lg:text-[3.4rem]; }
+  .lede { @apply max-w-[58ch] text-[17px] leading-relaxed text-muted sm:text-lg; }
+  .note { @apply font-hand text-[22px] font-bold leading-none; }
+
+  /* ---------- ECG graph paper (hero + check-up chart) ---------- */
+  .graph-paper {
+    background-color: #d5e7f3;
+    background-image:
+      linear-gradient(rgba(7,53,86,.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(7,53,86,.07) 1px, transparent 1px),
+      linear-gradient(rgba(7,53,86,.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(7,53,86,.035) 1px, transparent 1px);
+    background-size: 96px 96px, 96px 96px, 24px 24px, 24px 24px;
+    background-position: -1px -1px;
+  }
+
+  /* ---------- Copper pipe divider (water flows through it) ---------- */
+  .pipe {
+    @apply relative h-[18px] w-full;
+    background: linear-gradient(180deg, #8f4f22 0%, #e9a46d 28%, #f6c9a2 40%, #c97a3f 62%, #8f4f22 100%);
+  }
+  .pipe::after { /* flowing water glints */
+    content: ''; position: absolute; inset: 6px 0; opacity: .55;
+    background: repeating-linear-gradient(90deg, rgba(255,255,255,.9) 0 10px, transparent 10px 48px);
+    animation: flow 1.2s linear infinite;
+  }
+  .pipe-fitting {
+    @apply absolute top-1/2 h-[30px] w-[26px] -translate-y-1/2 rounded-[5px];
+    background: linear-gradient(180deg, #8a6b1c, #e8c35a 35%, #fff0b8 45%, #c9a032 70%, #7a5d14);
+  }
+
+  /* ---------- Treatment chart rows ---------- */
+  .rx-row { @apply grid gap-x-6 gap-y-3 border-t-2 border-dashed border-navy/15 py-7 first:border-t-0 sm:grid-cols-[64px_1fr] lg:grid-cols-[64px_1.1fr_1fr] lg:items-center; }
+
+  /* ---------- Symptom chips ---------- */
+  .chip {
+    @apply flex min-h-[48px] w-full items-center gap-3 rounded-2xl border-2 border-navy/15 bg-white px-4 py-2.5 text-left font-semibold text-navy transition-colors duration-150 hover:border-navy/50;
+  }
+  .chip[aria-pressed='true'] { @apply border-navy bg-navy text-white; }
+  .chip-emergency { @apply border-coral/40 bg-coral/5; }
+  .chip-emergency[aria-pressed='true'] { @apply border-coral-dark bg-coral-dark text-white; }
+
+  /* ---------- Prescription pad paper ---------- */
+  .pad {
+    @apply relative rounded-[22px] bg-white shadow-pad;
+  }
+
+  /* ---------- Form fields ---------- */
+  .field { @apply mt-1.5 block w-full rounded-xl border-2 border-navy/15 bg-white px-4 py-3 text-[16px] text-navy outline-none transition placeholder:text-navy/35 focus:border-navy; }
+  .label { @apply text-[15px] font-semibold text-navy; }
+}
+
+
+/* ---------- Keyframes (used directly below, so they live here not in tailwind.config) ---------- */
+@keyframes ecg { from { transform: translateX(0); } to { transform: translateX(-120px); } }
+@keyframes flow { from { background-position: 0 0; } to { background-position: 48px 0; } }
+@keyframes drip {
+  0% { transform: translateY(0) scale(.4); opacity: 0; }
+  15% { transform: translateY(0) scale(1); opacity: 1; }
+  70% { transform: translateY(var(--fall, 60px)) scale(1); opacity: 1; }
+  72%, 100% { transform: translateY(var(--fall, 60px)) scale(1.4, .3); opacity: 0; }
+}
+@keyframes puff { 0% { transform: translate(0,0) scale(.4); opacity: 0; } 30% { opacity: .9; } 100% { transform: translate(14px,-46px) scale(1.3); opacity: 0; } }
+@keyframes tap { 0%, 100% { transform: rotate(0deg); } 25% { transform: rotate(-28deg); } 50% { transform: rotate(6deg); } 75% { transform: rotate(-20deg); } }
+@keyframes listen { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+@keyframes breathe { 0%, 100% { transform: scaleY(1); } 50% { transform: scaleY(1.012); } }
+@keyframes blink { 0%, 92%, 100% { transform: scaleY(1); } 95% { transform: scaleY(.1); } }
+
+/* ============================================================
+   HERO PATIENT MONITOR — state machine
+   main.js puts one class on #patient: is-poorly → is-treating → is-healthy
+   ============================================================ */
+#patient .st { transition: opacity .5s ease; }
+#patient .st-healthy, #patient .st-treating { opacity: 0; }
+#patient.is-treating .st-poorly { opacity: 0; }
+#patient.is-treating .st-treating { opacity: 1; }
+#patient.is-healthy .st-poorly, #patient.is-healthy .st-treating { opacity: 0; }
+#patient.is-healthy .st-healthy { opacity: 1; }
+
+/* drip + puddle only while poorly / being treated */
+#patient .drop { transform-box: fill-box; transform-origin: center top; animation: drip 1.8s cubic-bezier(.55,0,1,.45) infinite; --fall: 54px; }
+#patient .puddle { transform-box: fill-box; transform-origin: center; transition: transform 1s ease, opacity 1s ease; }
+#patient.is-healthy .drop { animation: none; opacity: 0; }
+#patient.is-healthy .puddle { transform: scale(0); opacity: 0; }
+
+/* the wrench swings in during treatment */
+#patient .wrench { transform-box: fill-box; transform-origin: 85% 85%; opacity: 0; transform: rotate(40deg) translate(20px,20px); transition: opacity .3s, transform .4s cubic-bezier(.3,1.6,.6,1); }
+#patient.is-treating .wrench { opacity: 1; transform: none; }
+#patient.is-treating .wrench-swing { transform-box: fill-box; transform-origin: 85% 85%; animation: tap .7s ease-in-out infinite; }
+
+/* status LED + temp colour */
+#patient .led { fill: #ff6a55; transition: fill .5s; }
+#patient.is-treating .led { fill: #ffc93c; }
+#patient.is-healthy .led { fill: #2ed39b; }
+
+/* the boiler breathes and blinks; stethoscope listens */
+#patient .body-breathe { transform-box: fill-box; transform-origin: center bottom; }
+#patient.is-healthy .body-breathe { animation: breathe 3.2s ease-in-out infinite; }
+#patient .eye { transform-box: fill-box; transform-origin: center; animation: blink 4.5s ease-in-out infinite; }
+#patient .chestpiece { transform-box: fill-box; transform-origin: center; animation: listen 1.2s ease-in-out infinite; }
+#patient .puff { transform-box: fill-box; transform-origin: center; opacity: 0; }
+#patient.is-healthy .puff { animation: puff 2.6s ease-out infinite; }
+#patient.is-healthy .puff:nth-child(2) { animation-delay: .9s; }
+#patient.is-healthy .puff:nth-child(3) { animation-delay: 1.7s; }
+#patient .spark { transform-box: fill-box; transform-origin: center; transform: scale(0); transition: transform .35s cubic-bezier(.3,1.8,.6,1); }
+#patient.is-healthy .spark { transform: scale(1); }
+#patient.is-healthy .spark:nth-child(2) { transition-delay: .1s; }
+#patient.is-healthy .spark:nth-child(3) { transition-delay: .2s; }
+
+/* ECG trace scrolls inside the monitor screen */
+#patient .ecg { animation: ecg 3.4s linear infinite; }
+#patient.is-healthy .ecg { animation-duration: 1.6s; }
+
+/* ---------- "drip… drip… drip…" words in the rhyme band ---------- */
+.dripword { display: inline-block; opacity: .25; transform: translateY(-6px); transition: opacity .4s ease, transform .4s cubic-bezier(.3,1.6,.6,1); }
+.is-dripping .dripword { opacity: 1; transform: none; }
+.is-dripping .dripword:nth-of-type(2) { transition-delay: .45s; }
+.is-dripping .dripword:nth-of-type(3) { transition-delay: .9s; }
+
+/* ---------- Check-up chart ticks ---------- */
+.tick path { stroke-dasharray: 30; stroke-dashoffset: 30; transition: stroke-dashoffset .45s ease; }
+.is-ticked .tick path { stroke-dashoffset: 0; }
+.is-ticked li:nth-child(2) .tick path { transition-delay: .25s; }
+.is-ticked li:nth-child(3) .tick path { transition-delay: .5s; }
+.is-ticked li:nth-child(4) .tick path { transition-delay: .75s; }
+.is-ticked li:nth-child(5) .tick path { transition-delay: 1s; }
+
+/* ---------- Prescription swap ---------- */
+.rx-enter { animation: rx-in .35s ease-out; }
+@keyframes rx-in { from { opacity: 0; transform: translateY(8px) rotate(-.6deg); } to { opacity: 1; transform: none; } }
+
+/* ---------- Mobile menu ---------- */
+#mobile-menu { visibility: hidden; opacity: 0; transition: opacity .25s ease, visibility 0s linear .25s; }
+#mobile-menu.is-open { visibility: visible; opacity: 1; transition: opacity .25s ease; }
+
+/* ---------- Mobile call bar slides up once you're past the hero ---------- */
+#call-bar { transform: translateY(110%); transition: transform .3s ease; }
+#call-bar.is-shown { transform: none; }
+
+/* ---------- Lightbox ---------- */
+#lightbox { visibility: hidden; opacity: 0; transition: opacity .2s ease, visibility 0s linear .2s; }
+#lightbox.is-open { visibility: visible; opacity: 1; transition: opacity .2s ease; }
+
+/* ---------- Respect reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+  .pipe::after { animation: none; }
+}

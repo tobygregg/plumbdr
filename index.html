@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+  <!-- ============================================================
+       SEO + SHARING
+       EDIT: once the domain is live, swap https://www.example.gg
+       for the real address (3 places below + the JSON-LD further down)
+       ============================================================ -->
+  <title>The Plumb Doctor Ltd | Plumbing & Heating in Guernsey</title>
+  <meta name="description" content="Plumbing and heating across Guernsey: oil boiler servicing, boiler and cylinder installations, breakdowns, bathrooms and general plumbing. Free quotes, fully insured. Call 07839 100911." />
+  <meta name="theme-color" content="#D5E7F3" />
+  <link rel="canonical" href="https://www.example.gg/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="The Plumb Doctor Ltd" />
+  <meta property="og:title" content="The Plumb Doctor — plumbing & heating in Guernsey" />
+  <meta property="og:description" content="Poorly plumbing? The doctor will see you now. Boilers, cylinders, servicing, breakdowns and general plumbing. Free quotes." />
+  <meta property="og:image" content="https://www.example.gg/images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://www.example.gg/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="images/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="images/favicon-512.png" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+
+  <!-- Fonts: Bricolage Grotesque (headings), Figtree (body), Caveat (handwritten notes) — self-hosted in assets/fonts -->
+  <link rel="preload" href="assets/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/figtree-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/caveat-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+
+  <!-- Compiled Tailwind (built from src/input.css — run `npm run build` after editing classes) -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- Local business info for Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Plumber",
+    "name": "The Plumb Doctor Ltd",
+    "url": "https://www.example.gg/",
+    "logo": "https://www.example.gg/images/brand/logo-full.svg",
+    "image": "https://www.example.gg/images/og-image.jpg",
+    "telephone": "+44 7839 100911",
+    "email": "the.plumb.doctor@outlook.com",
+    "areaServed": { "@type": "Place", "name": "Guernsey" },
+    "address": { "@type": "PostalAddress", "addressRegion": "Guernsey", "addressCountry": "GG" },
+    "makesOffer": [
+      "Oil boiler servicing", "Boiler installations", "Boiler breakdowns and repairs", "Boiler breakdown cover",
+      "Hot water cylinder installations", "Bathroom installations", "General plumbing"
+    ]
+  }
+  </script>
+</head>
+
+<body class="overflow-x-hidden">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-xl focus:bg-sunny focus:px-4 focus:py-2 focus:font-semibold focus:text-navy">Skip to content</a>
+
+  <!-- ============================================================
+       HEADER
+       ============================================================ -->
+  <header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow] duration-300">
+    <div class="wrap flex h-[72px] items-center justify-between gap-4">
+      <a href="#top" class="flex items-center gap-2.5" aria-label="The Plumb Doctor — home">
+        <img src="images/brand/logo-mark.svg" alt="" width="681" height="658" class="h-10 w-auto sm:h-11" />
+        <img src="images/brand/logo-wordmark.svg" alt="The Plumb Doctor" width="930" height="393" class="h-[30px] w-auto sm:h-[34px]" />
+      </a>
+
+      <nav class="hidden items-center gap-7 lg:flex" aria-label="Main">
+        <a href="#treatments" class="font-semibold text-navy/75 transition hover:text-navy">Treatments</a>
+        <a href="#symptoms" class="font-semibold text-navy/75 transition hover:text-navy">Symptom checker</a>
+        <a href="#check-up" class="font-semibold text-navy/75 transition hover:text-navy">Servicing</a>
+        <a href="#work" class="font-semibold text-navy/75 transition hover:text-navy">Our work</a>
+        <a href="tel:+447839100911" class="btn-sunny !min-h-[46px] !px-5 !text-base">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+          07839 100911
+        </a>
+      </nav>
+
+      <button id="menu-btn" class="relative grid h-12 w-12 place-items-center rounded-xl text-navy lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <span id="mb-top" class="absolute h-[3px] w-6 -translate-y-[4px] rounded-full bg-current transition-transform duration-300"></span>
+        <span id="mb-bot" class="absolute h-[3px] w-6 translate-y-[4px] rounded-full bg-current transition-transform duration-300"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu (full screen) -->
+  <div id="mobile-menu" class="graph-paper fixed inset-0 z-40 flex flex-col px-6 pb-10 pt-28 lg:hidden" aria-hidden="true">
+    <nav class="flex flex-col gap-1" aria-label="Mobile">
+      <a href="#treatments" class="py-2.5 font-display text-[2rem] font-extrabold">Treatments</a>
+      <a href="#symptoms" class="py-2.5 font-display text-[2rem] font-extrabold">Symptom checker</a>
+      <a href="#check-up" class="py-2.5 font-display text-[2rem] font-extrabold">Servicing</a>
+      <a href="#work" class="py-2.5 font-display text-[2rem] font-extrabold">Our work</a>
+      <a href="#contact" class="py-2.5 font-display text-[2rem] font-extrabold">Book a house call</a>
+    </nav>
+    <div class="mt-auto grid gap-3">
+      <a href="tel:+447839100911" class="btn-sunny w-full">Call 07839 100911</a>
+      <a href="https://wa.me/447839100911" class="btn-navy w-full" target="_blank" rel="noopener">Message on WhatsApp</a>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ============================================================
+         HERO — "the patient monitor"
+         The boiler starts poorly, gets treated, ends up healthy.
+         (Animation lives in assets/js/main.js → "Hero patient")
+         ============================================================ -->
+    <section id="top" class="graph-paper relative overflow-hidden pt-[72px]">
+      <div class="wrap grid min-h-[calc(100svh-72px)] items-center gap-4 pb-6 pt-4 lg:grid-cols-[1fr_1.05fr] lg:gap-10 lg:py-10">
+
+        <div class="relative z-10 max-w-[560px]">
+          <p class="note -rotate-3 text-[30px] text-navy-600 sm:text-[34px]">
+            Poorly plumbing?
+            <svg class="-mt-1 block h-3 w-44 text-sunny-dark" viewBox="0 0 176 12" fill="none" aria-hidden="true"><path d="M2 8c30-6 60-6 88-3s58 3 84-2" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
+          </p>
+          <h1 class="mt-3 font-display text-[2.85rem] font-extrabold leading-[.95] tracking-[-0.035em] sm:text-[4rem] lg:text-[4.9rem]">
+            The doctor will see you now.
+          </h1>
+          <p class="mt-5 max-w-[46ch] text-[17px] leading-relaxed text-navy/80 sm:text-lg">
+            Plumbing and heating across Guernsey, from a new tap washer to a brand-new boiler. Friendly, honest, fully insured, and quotes are free.
+          </p>
+
+          <div class="mt-7 flex flex-wrap gap-3">
+            <a href="tel:+447839100911" class="btn-sunny flex-1 sm:flex-none">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+              <span class="sm:hidden">Call now</span><span class="hidden sm:inline">Call 07839 100911</span>
+            </a>
+            <a href="https://wa.me/447839100911" class="btn-outline flex-1 sm:flex-none" target="_blank" rel="noopener">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
+              WhatsApp
+            </a>
+          </div>
+
+          <ul class="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-[15px] font-semibold text-navy/80">
+            <li class="flex items-center gap-1.5"><svg class="h-5 w-5 text-pulse-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Free quotes</li>
+            <li class="flex items-center gap-1.5"><svg class="h-5 w-5 text-pulse-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Fully insured</li>
+            <li class="flex items-center gap-1.5"><svg class="h-5 w-5 text-pulse-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Local tradesman</li>
+          </ul>
+        </div>
+
+        <!-- Hero illustration: patient monitor + poorly boiler -->
+        <div class="relative mx-auto w-full max-w-[400px] sm:max-w-[520px] lg:max-w-none">
+          <svg id="patient" class="is-poorly h-auto w-full max-h-[38svh] lg:max-h-[72svh]" viewBox="0 0 620 540" role="img" aria-labelledby="patient-title">
+            <title id="patient-title">A cartoon boiler on a patient monitor goes from poorly to healthy after a quick fix with a wrench.</title>
+            <defs>
+              <clipPath id="screen-clip"><rect x="40" y="52" width="238" height="128" rx="10"/></clipPath>
+              <pattern id="screen-grid" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#2ED39B" stroke-opacity=".14"/></pattern>
+              <linearGradient id="tube-fade" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="150"><stop offset="0" stop-color="#073556" stop-opacity="0"/><stop offset="1" stop-color="#073556"/></linearGradient>
+              <mask id="jaw"><rect x="-40" y="-40" width="160" height="80" fill="#fff"/><rect x="-24" y="-6.5" width="22" height="13" fill="#000"/></mask>
+            </defs>
+
+            <!-- soft backdrop + floor shadow -->
+            <circle cx="330" cy="290" r="252" fill="#EAF3FA"/>
+            <ellipse cx="438" cy="506" rx="128" ry="10" fill="#073556" opacity=".1"/>
+            <ellipse cx="159" cy="490" rx="70" ry="7" fill="#073556" opacity=".1"/>
+
+            <!-- MONITOR -->
+            <g>
+              <rect x="152" y="236" width="14" height="236" rx="4" fill="#073556"/>
+              <rect x="104" y="468" width="110" height="14" rx="7" fill="#073556"/>
+              <circle cx="114" cy="488" r="6" fill="#073556"/><circle cx="204" cy="488" r="6" fill="#073556"/>
+              <rect x="24" y="36" width="270" height="206" rx="24" fill="#073556"/>
+              <rect x="40" y="52" width="238" height="128" rx="10" fill="#04223A"/>
+              <rect x="40" y="52" width="238" height="128" fill="url(#screen-grid)"/>
+              <g clip-path="url(#screen-clip)">
+                <g class="ecg">
+                  <path class="st st-poorly" d="M40 128 h40 l6 -6 l6 6 h20 l4 -14 l5 20 l4 -6 h35 h40 l6 -6 l6 6 h20 l4 -14 l5 20 l4 -6 h35 h40 l6 -6 l6 6 h20 l4 -14 l5 20 l4 -6 h35 h40 l6 -6 l6 6 h20 l4 -14 l5 20 l4 -6 h35" fill="none" stroke="#FF6A55" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+                  <path class="st st-treating" d="M40 128 h26 l7 -5 l7 5 h8 l5 -30 l7 46 l6 -16 h14 l9 -8 l9 8 h22 h26 l7 -5 l7 5 h8 l5 -30 l7 46 l6 -16 h14 l9 -8 l9 8 h22 h26 l7 -5 l7 5 h8 l5 -30 l7 46 l6 -16 h14 l9 -8 l9 8 h22 h26 l7 -5 l7 5 h8 l5 -30 l7 46 l6 -16 h14 l9 -8 l9 8 h22" fill="none" stroke="#FFC93C" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+                  <path class="st st-healthy" d="M40 128 h26 l7 -7 l7 7 h8 l5 -48 l7 72 l6 -24 h14 l9 -12 l9 12 h22 h26 l7 -7 l7 7 h8 l5 -48 l7 72 l6 -24 h14 l9 -12 l9 12 h22 h26 l7 -7 l7 7 h8 l5 -48 l7 72 l6 -24 h14 l9 -12 l9 12 h22 h26 l7 -7 l7 7 h8 l5 -48 l7 72 l6 -24 h14 l9 -12 l9 12 h22" fill="none" stroke="#2ED39B" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+                </g>
+              </g>
+              <text x="52" y="72" font-family="Figtree, sans-serif" font-size="13" font-weight="600" fill="#D5E7F3" opacity=".7">Patient: boiler</text>
+              <path class="st st-healthy" d="M262 64c-2.5-3.5-8-2.4-8 1.6 0 3.4 5 6.4 8 8.6 3-2.2 8-5.2 8-8.6 0-4-5.5-5.1-8-1.6z" fill="#2ED39B"/>
+
+              <!-- status pill -->
+              <g font-family="'Bricolage Grotesque', sans-serif" font-size="17" font-weight="800" text-anchor="middle">
+                <g class="st st-poorly"><rect x="40" y="194" width="112" height="34" rx="17" fill="#FF6A55"/><text x="96" y="217" fill="#fff">Poorly</text></g>
+                <g class="st st-treating"><rect x="40" y="194" width="112" height="34" rx="17" fill="#FFC93C"/><text x="96" y="217" fill="#073556">Treating…</text></g>
+                <g class="st st-healthy"><rect x="40" y="194" width="112" height="34" rx="17" fill="#2ED39B"/><text x="96" y="217" fill="#073556">Healthy</text></g>
+              </g>
+              <text x="174" y="207" font-family="Figtree, sans-serif" font-size="12" font-weight="600" fill="#D5E7F3" opacity=".7">Water temp</text>
+              <text id="temp-val" x="174" y="230" font-family="'Bricolage Grotesque', sans-serif" font-size="24" font-weight="800" fill="#fff">12°C</text>
+            </g>
+
+            <!-- STETHOSCOPE tube (comes in from the top) -->
+            <path d="M356 432 C 296 446, 296 340, 310 262 S 326 70, 300 -20" fill="none" stroke="url(#tube-fade)" stroke-width="7" stroke-linecap="round"/>
+
+            <!-- FLUE + steam -->
+            <rect x="418" y="96" width="38" height="98" fill="#fff" stroke="#073556" stroke-width="6"/>
+            <rect x="410" y="80" width="54" height="20" rx="5" fill="#D5E7F3" stroke="#073556" stroke-width="5"/>
+            <rect x="410" y="168" width="54" height="20" rx="5" fill="#D5E7F3" stroke="#073556" stroke-width="5"/>
+            <g>
+              <circle class="puff" cx="437" cy="66" r="11" fill="#fff" stroke="#073556" stroke-opacity=".25" stroke-width="3"/>
+              <circle class="puff" cx="430" cy="64" r="9" fill="#fff" stroke="#073556" stroke-opacity=".25" stroke-width="3"/>
+              <circle class="puff" cx="444" cy="62" r="8" fill="#fff" stroke="#073556" stroke-opacity=".25" stroke-width="3"/>
+            </g>
+
+            <!-- PIPES out of the side of the boiler (the top one is leaking) -->
+            <g stroke-linecap="butt">
+              <path d="M538 430 H624" stroke="#C97A3F" stroke-width="13"/>
+              <path d="M538 426 H624" stroke="#F0B07C" stroke-width="3"/>
+              <path d="M538 458 H624" stroke="#C97A3F" stroke-width="13"/>
+              <path d="M538 454 H624" stroke="#F0B07C" stroke-width="3"/>
+            </g>
+            <rect x="562" y="419" width="22" height="22" rx="4" fill="#D9B24A" stroke="#8A6B1C" stroke-width="2"/>
+            <ellipse class="puddle" cx="574" cy="508" rx="24" ry="5.5" fill="#7CC4F0" opacity=".8"/>
+            <path class="drop" d="M573 442 q6.5 9 0 15 q-6.5 -6 0 -15z" fill="#7CC4F0"/>
+
+            <!-- BOILER (the patient) -->
+            <g class="body-breathe">
+              <rect x="350" y="486" width="26" height="16" rx="4" fill="#073556"/>
+              <rect x="494" y="486" width="26" height="16" rx="4" fill="#073556"/>
+              <rect x="330" y="190" width="210" height="300" rx="22" fill="#fff" stroke="#073556" stroke-width="6"/>
+              <rect x="337" y="197" width="196" height="62" rx="16" fill="#073556"/>
+              <circle cx="372" cy="228" r="16" fill="#D5E7F3"/>
+              <path d="M372 228 L381 216" stroke="#073556" stroke-width="4" stroke-linecap="round"/>
+              <rect x="408" y="215" width="16" height="26" rx="5" fill="#D5E7F3"/>
+              <rect x="434" y="215" width="16" height="26" rx="5" fill="#D5E7F3"/>
+              <rect x="460" y="215" width="16" height="26" rx="5" fill="#D5E7F3"/>
+              <circle class="led" cx="506" cy="228" r="8"/>
+              <path d="M362 452 H508 M362 466 H508" stroke="#073556" stroke-opacity=".14" stroke-width="5" stroke-linecap="round"/>
+
+              <!-- face -->
+              <ellipse class="eye" cx="402" cy="330" rx="11" ry="14" fill="#073556"/>
+              <ellipse class="eye" cx="468" cy="330" rx="11" ry="14" fill="#073556"/>
+              <circle cx="405" cy="325" r="3.5" fill="#fff"/><circle cx="471" cy="325" r="3.5" fill="#fff"/>
+              <g fill="none" stroke="#073556" stroke-width="5" stroke-linecap="round">
+                <path class="st st-poorly" d="M386 306 L412 297 M484 306 L458 297"/>
+                <path class="st st-treating" d="M388 300 h24 M458 300 h24"/>
+                <path class="st st-healthy" d="M388 304 q12 -11 24 0 M456 304 q12 -11 24 0"/>
+                <path class="st st-poorly" d="M412 392 q23 -20 46 0" stroke-width="6"/>
+                <path class="st st-treating" d="M410 386 q6 -7 12 0 t12 0 t12 0 t12 0" stroke-width="5"/>
+              </g>
+              <g class="st st-healthy">
+                <path d="M404 374 q31 36 62 0 z" fill="#073556" stroke="#073556" stroke-width="5" stroke-linejoin="round"/>
+                <path d="M422 388 q13 -8 26 0 q-13 10 -26 0z" fill="#FF6A55"/>
+                <ellipse cx="381" cy="364" rx="13" ry="7.5" fill="#FF6A55" opacity=".45"/>
+                <ellipse cx="489" cy="364" rx="13" ry="7.5" fill="#FF6A55" opacity=".45"/>
+              </g>
+              <!-- poorly: thermometer in mouth + sweat drop -->
+              <g class="st st-poorly">
+                <path d="M448 384 L506 360" stroke="#073556" stroke-width="12" stroke-linecap="round"/>
+                <path d="M448 384 L506 360" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+                <path d="M452 382 L478 371" stroke="#FF6A55" stroke-width="3" stroke-linecap="round"/>
+                <path d="M498 268 q8 11 0 18 q-8 -7 0 -18z" fill="#7CC4F0"/>
+              </g>
+            </g>
+
+            <!-- stethoscope chest piece, listening -->
+            <g class="chestpiece">
+              <circle cx="356" cy="432" r="17" fill="#D5E7F3" stroke="#073556" stroke-width="6"/>
+              <circle cx="356" cy="432" r="6" fill="#073556"/>
+            </g>
+
+            <!-- WRENCH — swings in during treatment -->
+            <g class="wrench">
+              <g transform="translate(573 422) rotate(-90)">
+                <g class="wrench-swing" style="transform-origin: 8% 50%">
+                  <g mask="url(#jaw)"><circle cx="0" cy="0" r="17" fill="#073556"/></g>
+                  <rect x="12" y="-7" width="78" height="14" rx="7" fill="#073556"/>
+                  <circle cx="90" cy="0" r="13" fill="#073556"/><circle cx="90" cy="0" r="6" fill="#EAF3FA"/>
+                </g>
+              </g>
+            </g>
+            <!-- sparkles once fixed -->
+            <g fill="#FFC93C" stroke="#073556" stroke-width="2.5" stroke-linejoin="round">
+              <path class="spark" d="M596 388 l4 10 l10 4 l-10 4 l-4 10 l-4 -10 l-10 -4 l10 -4 z"/>
+              <path class="spark" d="M560 372 l3 7 l7 3 l-7 3 l-3 7 l-3 -7 l-7 -3 l7 -3 z"/>
+              <path class="spark" d="M318 196 l3 7 l7 3 l-7 3 l-3 7 l-3 -7 l-7 -3 l7 -3 z"/>
+            </g>
+
+            <!-- doctor's handwritten note -->
+            <g font-family="Caveat, cursive" font-size="28" font-weight="700" fill="#1C527D">
+              <g class="st st-poorly"><text x="474" y="140" transform="rotate(-6 474 140)">feeling chilly…</text></g>
+              <g class="st st-treating"><text x="474" y="140" transform="rotate(-6 474 140)">hold still…</text></g>
+              <g class="st st-healthy"><text x="474" y="140" transform="rotate(-6 474 140)">toasty again!</text></g>
+              <path d="M520 152 q-8 18 -26 30" fill="none" stroke="#1C527D" stroke-width="3" stroke-linecap="round"/>
+              <path d="M492 172 l1 11 l10 -3" fill="none" stroke="#1C527D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+          </svg>
+
+          <button id="replay" type="button" class="note absolute bottom-0 right-2 hidden items-center gap-1.5 rounded-lg px-2 py-1 text-[22px] text-navy-600 transition hover:text-navy sm:right-6 lg:flex">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
+            run the check-up again
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         RHYME BAND — straight off The Plumb Doctor's own flyer
+         ============================================================ -->
+    <section aria-label="Oh no, oh dear" class="relative bg-navy text-white">
+      <div class="pipe" aria-hidden="true">
+        <span class="pipe-fitting left-[12%]"></span><span class="pipe-fitting left-[47%]"></span><span class="pipe-fitting left-[83%]"></span>
+      </div>
+      <div class="wrap grid items-center gap-10 py-16 sm:py-20 lg:grid-cols-[1.4fr_1fr] lg:py-24">
+        <div id="rhyme">
+          <p class="font-display text-[2.4rem] font-extrabold leading-[1.02] tracking-[-0.02em] sm:text-[3.3rem] lg:text-[3.9rem]">
+            Oh no! Oh dear!<br />
+            Is your boiler not hot?<br />
+            <span class="text-scrubs">Are your pipes going
+              <span class="dripword">drip…</span>
+              <span class="dripword">drip…</span>
+              <span class="dripword">drip…</span>
+              quite a lot?</span>
+          </p>
+          <p class="mt-7 max-w-[52ch] text-lg leading-relaxed text-scrubs/85">
+            From clunks in the night to radiators cold, The Plumb Doctor's here: reliable and bold. Fast fixes, fair prices and service that's slick. Call now and we'll sort it out quickity-quick!
+          </p>
+        </div>
+
+        <!-- leaky tap into a bucket -->
+        <svg class="mx-auto w-full max-w-[300px] lg:max-w-[340px]" viewBox="0 0 320 300" aria-hidden="true">
+          <path d="M0 40 H130 a20 20 0 0 1 20 20 V84" fill="none" stroke="#C97A3F" stroke-width="22"/>
+          <path d="M0 33 H128 a26 26 0 0 1 26 26" fill="none" stroke="#F0B07C" stroke-width="4" opacity=".7"/>
+          <rect x="128" y="12" width="44" height="18" rx="5" fill="#D5E7F3"/>
+          <rect x="144" y="22" width="12" height="22" fill="#D5E7F3"/>
+          <rect x="132" y="80" width="36" height="16" rx="4" fill="#D9B24A"/>
+          <!-- sad tap face -->
+          <circle cx="104" cy="44" r="3.5" fill="#073556"/><circle cx="118" cy="44" r="3.5" fill="#073556"/>
+          <path d="M104 56 q7 -5 14 0" fill="none" stroke="#073556" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- drops -->
+          <g fill="#7CC4F0">
+            <path class="animate-[drip_1.6s_cubic-bezier(.55,0,1,.45)_infinite] [--fall:130px]" d="M150 98 q8 11 0 18 q-8 -7 0 -18z"/>
+            <path class="animate-[drip_1.6s_cubic-bezier(.55,0,1,.45)_.8s_infinite] [--fall:130px]" d="M150 98 q8 11 0 18 q-8 -7 0 -18z"/>
+          </g>
+          <!-- bucket -->
+          <path d="M92 216 h116 l-12 78 h-92 z" fill="#FFC93C" stroke="#E8A800" stroke-width="4" stroke-linejoin="round"/>
+          <ellipse cx="150" cy="216" rx="58" ry="10" fill="#E8A800"/>
+          <ellipse cx="150" cy="218" rx="50" ry="6" fill="#7CC4F0"/>
+          <path d="M94 214 C 94 160, 206 160, 206 214" fill="none" stroke="#D5E7F3" stroke-width="4"/>
+          <text x="232" y="214" font-family="Caveat, cursive" font-size="30" font-weight="700" fill="#D5E7F3" transform="rotate(-10 232 214)">plink!</text>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TREATMENTS (services)
+         EDIT: one row per service — copy a <div class="rx-row"> to add one
+         ============================================================ -->
+    <section id="treatments" class="bg-chart py-20 sm:py-24 lg:py-28">
+      <div class="wrap">
+        <div class="grid gap-6 lg:grid-cols-[1fr_1fr] lg:items-end">
+          <h2 class="h-section">Treatments on offer</h2>
+          <p class="lede lg:justify-self-end">Plumbing and heating for homes and businesses around the island. No job too big, no job too small.</p>
+        </div>
+
+        <div class="mt-12 rounded-[28px] border-2 border-navy/10 bg-white px-5 sm:px-8 lg:px-10">
+          <div class="hidden grid-cols-[64px_1.1fr_1fr] gap-x-6 border-b-2 border-navy pb-3 pt-6 text-[15px] font-bold text-navy/60 lg:grid">
+            <span></span><span>Treatment</span><span>Good for</span>
+          </div>
+
+          <div class="rx-row">
+            <svg class="h-14 w-14" viewBox="0 0 56 56" fill="none" stroke="#073556" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><rect x="12" y="7" width="32" height="44" rx="6" fill="#fff"/><path d="M12 19h32"/><path d="M28 27c6 6 7 12 0 16-7-4-6-10 0-16z" fill="#FFC93C"/><path d="M47 4l1.5 3.5L52 9l-3.5 1.5L47 14l-1.5-3.5L42 9l3.5-1.5z" fill="#FFC93C" stroke-width="2"/></svg>
+            <div>
+              <h3 class="font-display text-2xl font-extrabold">Boiler installations</h3>
+              <p class="mt-1.5 max-w-[46ch] text-muted">New boilers supplied and fitted, with the controls set up and explained before we leave.</p>
+            </div>
+            <p class="note text-[25px] text-navy-600 sm:col-start-2 lg:col-start-auto">an old boiler on its last legs</p>
+          </div>
+
+          <div class="rx-row">
+            <svg class="h-14 w-14" viewBox="0 0 56 56" fill="none" stroke="#073556" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><rect x="10" y="9" width="36" height="43" rx="5" fill="#fff"/><rect x="20" y="5" width="16" height="9" rx="3" fill="#FFC93C"/><path d="M17 25l3.5 3.5L27 22M17 38l3.5 3.5L27 35M32 26h7M32 39h7"/></svg>
+            <div>
+              <h3 class="font-display text-2xl font-extrabold">Annual boiler servicing</h3>
+              <p class="mt-1.5 max-w-[46ch] text-muted">A yearly check-up for your oil boiler: cleaned, tested and tuned so it runs safely and efficiently.</p>
+            </div>
+            <p class="note text-[25px] text-navy-600 sm:col-start-2 lg:col-start-auto">staying healthy (and keeping the warranty valid)</p>
+          </div>
+
+          <div class="rx-row">
+            <svg class="h-14 w-14" viewBox="0 0 56 56" fill="none" stroke="#073556" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><rect x="10" y="8" width="36" height="42" rx="6" fill="#fff"/><g transform="rotate(-35 28 30)"><rect x="12" y="25" width="32" height="10" rx="5" fill="#FFC93C"/><rect x="23" y="25" width="10" height="10" fill="#FFE08A"/></g><g transform="rotate(35 28 30)"><rect x="12" y="25" width="32" height="10" rx="5" fill="#FFC93C"/></g><circle cx="28" cy="30" r="1.6" fill="#073556" stroke="none"/></svg>
+            <div>
+              <h3 class="font-display text-2xl font-extrabold">Breakdowns and repairs</h3>
+              <p class="mt-1.5 max-w-[46ch] text-muted">No heating, no hot water, strange noises. We find the fault and fix it. Ask about our boiler breakdown cover.</p>
+            </div>
+            <p class="note text-[25px] text-navy-600 sm:col-start-2 lg:col-start-auto">cold showers and colder radiators</p>
+          </div>
+
+          <div class="rx-row">
+            <svg class="h-14 w-14" viewBox="0 0 56 56" fill="none" stroke="#073556" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><rect x="10" y="5" width="22" height="47" rx="11" fill="#fff"/><path d="M32 18h6"/><circle cx="45" cy="18" r="7" fill="#FFC93C"/><path d="M15 15h12" stroke-linecap="round"/></svg>
+            <div>
+              <h3 class="font-display text-2xl font-extrabold">Cylinder installations</h3>
+              <p class="mt-1.5 max-w-[46ch] text-muted">Hot water cylinders and expansion vessels, plus the valves that keep them safe, fitted and set up properly.</p>
+            </div>
+            <p class="note text-[25px] text-navy-600 sm:col-start-2 lg:col-start-auto">lukewarm, slow or no hot water</p>
+          </div>
+
+          <div class="rx-row">
+            <svg class="h-14 w-14" viewBox="0 0 56 56" fill="none" stroke="#073556" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M6 30h44v6a12 12 0 0 1-12 12H18A12 12 0 0 1 6 36z" fill="#fff"/><path d="M14 48l-2 4M42 48l2 4"/><path d="M12 30V12a5 5 0 0 1 10 0v1"/><path d="M17 13h10" /><g fill="#7CC4F0" stroke="none"><circle cx="20" cy="20" r="2"/><circle cx="25" cy="23" r="2"/><circle cx="21" cy="26" r="1.6"/></g><circle cx="38" cy="25" r="4" fill="#FFC93C"/><circle cx="44" cy="22" r="2.5" fill="#FFC93C"/></svg>
+            <div>
+              <h3 class="font-display text-2xl font-extrabold">Bathrooms</h3>
+              <p class="mt-1.5 max-w-[46ch] text-muted">From swapping a toilet or basin to fitting a whole new bathroom suite.</p>
+            </div>
+            <p class="note text-[25px] text-navy-600 sm:col-start-2 lg:col-start-auto">a bathroom that's seen better days</p>
+          </div>
+
+          <div class="rx-row">
+            <svg class="h-14 w-14" viewBox="0 0 56 56" fill="none" stroke="#073556" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M4 18h22a10 10 0 0 1 10 10v4h-8v-3a3 3 0 0 0-3-3H4z" fill="#fff"/><path d="M18 18v-6M12 12h12"/><path d="M32 38q5 7 0 11q-5-4 0-11z" fill="#FFC93C"/></svg>
+            <div>
+              <h3 class="font-display text-2xl font-extrabold">General plumbing</h3>
+              <p class="mt-1.5 max-w-[46ch] text-muted">Dripping taps, leaks, new sinks and taps, toilets that won't stop running. Nothing's too small.</p>
+            </div>
+            <p class="note text-[25px] text-navy-600 sm:col-start-2 lg:col-start-auto">drip… drip… drip…</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SYMPTOM CHECKER
+         EDIT: the symptoms, diagnoses and first-aid tips live in
+         assets/js/main.js → SYMPTOMS (one entry per button below)
+         ============================================================ -->
+    <section id="symptoms" class="graph-paper py-20 sm:py-24 lg:py-28">
+      <div class="wrap">
+        <h2 class="h-section max-w-[16ch]">What are the symptoms?</h2>
+        <p class="lede mt-5">Pick what's going on and we'll write you a prescription. Some things you can sort yourself. For everything else, we'll come and fix it.</p>
+
+        <div class="mt-12 grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:gap-12">
+          <div id="symptom-list" class="grid content-start gap-2.5 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2" role="group" aria-label="Symptoms">
+            <button type="button" class="chip" data-symptom="no-heat" aria-pressed="true">No heating or hot water</button>
+            <button type="button" class="chip" data-symptom="cold-top" aria-pressed="false">Radiators cold at the top</button>
+            <button type="button" class="chip" data-symptom="cold-bottom" aria-pressed="false">Radiators cold at the bottom</button>
+            <button type="button" class="chip" data-symptom="noise" aria-pressed="false">Banging, gurgling or kettling</button>
+            <button type="button" class="chip" data-symptom="pressure" aria-pressed="false">Pressure keeps dropping</button>
+            <button type="button" class="chip" data-symptom="drip" aria-pressed="false">Dripping tap</button>
+            <button type="button" class="chip" data-symptom="leak" aria-pressed="false">Leak or burst pipe</button>
+            <button type="button" class="chip" data-symptom="service" aria-pressed="false">Not serviced this year</button>
+            <button type="button" class="chip chip-emergency sm:col-span-2 lg:col-span-1 xl:col-span-2" data-symptom="fumes" aria-pressed="false">
+              <svg class="h-5 w-5 shrink-0 text-coral-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0zM12 9v4M12 17h.01"/></svg>
+              Smell of fumes, or the CO alarm is going off
+            </button>
+          </div>
+
+          <!-- the prescription pad (filled in by main.js) -->
+          <div class="pad overflow-hidden lg:-rotate-1" aria-live="polite">
+            <div id="rx-head" class="flex items-center justify-between gap-4 bg-navy px-6 py-4 text-white transition-colors duration-300 sm:px-8">
+              <div class="flex items-center gap-3">
+                <img src="images/brand/logo-mark-white.svg" alt="" width="681" height="658" class="h-9 w-auto" />
+                <div class="leading-tight">
+                  <p class="font-display text-lg font-extrabold">The Plumb Doctor Ltd</p>
+                  <p class="text-sm text-white/70">Plumbing and heating, Guernsey</p>
+                </div>
+              </div>
+              <span class="font-display text-[2.6rem] font-extrabold italic leading-none" aria-hidden="true">Rx</span>
+            </div>
+
+            <div id="rx-body" class="px-6 pb-7 pt-6 sm:px-8">
+              <p class="text-sm font-semibold text-navy/55">Patient's complaint</p>
+              <p id="rx-complaint" class="note mt-0.5 text-[30px]">No heating or hot water</p>
+
+              <p class="mt-5 text-sm font-semibold text-navy/55">Likely diagnosis</p>
+              <p id="rx-diagnosis" class="mt-1 text-[17px] font-semibold leading-snug"></p>
+
+              <p id="rx-aid-label" class="mt-5 text-sm font-semibold text-navy/55">First aid you can try now</p>
+              <ul id="rx-aid" class="mt-2 grid gap-2 text-[16px] leading-snug text-navy/85"></ul>
+
+              <p class="mt-5 text-sm font-semibold text-navy/55">Prescribed treatment</p>
+              <p id="rx-treatment" class="note mt-0.5 text-[27px] text-navy-600"></p>
+
+              <div class="mt-7 flex flex-wrap items-center justify-between gap-4 border-t-2 border-dashed border-navy/15 pt-5">
+                <svg class="h-10 w-32 text-navy-600" viewBox="0 0 128 40" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-label="Signed, The Plumb Doctor" role="img"><path d="M4 30c6-14 10-24 12-20s-6 22-2 20 8-18 12-16-2 14 2 14 6-10 10-10 0 8 4 8 8-14 12-14-2 12 4 12 10-8 14-8 2 6 8 6 10-6 14-8 10 2 14 0"/><path d="M8 36h112" opacity=".4"/></svg>
+                <a id="rx-book" href="#contact" class="btn-navy">Book this treatment</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ANNUAL CHECK-UP (oil boiler servicing) — from the yellow flyer
+         ============================================================ -->
+    <section id="check-up" class="relative overflow-hidden bg-sunny py-20 sm:py-24 lg:py-28">
+      <div class="wrap grid items-center gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
+        <div>
+          <h2 class="h-section max-w-[14ch]">I like my oil boiler serviced, yes I do!</h2>
+          <p class="mt-5 max-w-[50ch] text-lg leading-relaxed text-navy/80">An annual service is the cheapest medicine there is. Here's what a yearly check-up does for you.</p>
+
+          <ul id="chart" class="mt-8 grid gap-4">
+            <li class="flex gap-4">
+              <svg class="tick mt-0.5 h-8 w-8 shrink-0 rounded-lg border-[3px] border-navy bg-white" viewBox="0 0 32 32" fill="none" stroke="#073556" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 16.5l6 6L25 10"/></svg>
+              <div><h3 class="font-display text-xl font-extrabold">Keeps you safe</h3><p class="text-navy/80">Helps prevent oil leaks, breakdowns and carbon monoxide risks.</p></div>
+            </li>
+            <li class="flex gap-4">
+              <svg class="tick mt-0.5 h-8 w-8 shrink-0 rounded-lg border-[3px] border-navy bg-white" viewBox="0 0 32 32" fill="none" stroke="#073556" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 16.5l6 6L25 10"/></svg>
+              <div><h3 class="font-display text-xl font-extrabold">Saves you money</h3><p class="text-navy/80">A well-tuned boiler burns less oil, which can lower your heating bills.</p></div>
+            </li>
+            <li class="flex gap-4">
+              <svg class="tick mt-0.5 h-8 w-8 shrink-0 rounded-lg border-[3px] border-navy bg-white" viewBox="0 0 32 32" fill="none" stroke="#073556" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 16.5l6 6L25 10"/></svg>
+              <div><h3 class="font-display text-xl font-extrabold">Helps it last longer</h3><p class="text-navy/80">Regular servicing keeps your boiler running reliably for years.</p></div>
+            </li>
+            <li class="flex gap-4">
+              <svg class="tick mt-0.5 h-8 w-8 shrink-0 rounded-lg border-[3px] border-navy bg-white" viewBox="0 0 32 32" fill="none" stroke="#073556" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 16.5l6 6L25 10"/></svg>
+              <div><h3 class="font-display text-xl font-extrabold">Keeps your warranty valid</h3><p class="text-navy/80">Many manufacturers require an annual service.</p></div>
+            </li>
+            <li class="flex gap-4">
+              <svg class="tick mt-0.5 h-8 w-8 shrink-0 rounded-lg border-[3px] border-navy bg-white" viewBox="0 0 32 32" fill="none" stroke="#073556" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 16.5l6 6L25 10"/></svg>
+              <div><h3 class="font-display text-xl font-extrabold">Peace of mind</h3><p class="text-navy/80">One less thing to worry about when the weather turns.</p></div>
+            </li>
+          </ul>
+
+          <div class="mt-9 flex flex-wrap items-center gap-x-6 gap-y-4">
+            <a href="#contact" data-book="Annual boiler service" class="btn-navy">Book a boiler service</a>
+            <p class="font-semibold text-navy/80">Breakdown cover available, just ask.</p>
+          </div>
+        </div>
+
+        <!-- real job photo, pinned to the chart -->
+        <figure class="relative mx-auto w-full max-w-[420px] rotate-2 rounded-[22px] bg-white p-3 pb-5 shadow-pad">
+          <span class="absolute -top-3 left-1/2 h-7 w-28 -translate-x-1/2 -rotate-3 rounded-sm bg-scrubs/90" aria-hidden="true"></span>
+          <img src="images/work/oil-boiler-service-sm.webp" alt="Inside an outdoor Warmflow oil boiler with its Riello burner, opened up for a service" width="602" height="800" loading="lazy" class="aspect-[4/5] w-full rounded-[14px] object-cover" />
+          <figcaption class="note mt-3 px-1 text-[24px] text-navy-600">Warmflow + Riello burner, opened up for its check-up</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CASE NOTES (gallery)
+         EDIT: copy a <li> to add a photo. Images go in images/work/
+         as name.webp (1600px) + name-sm.webp (800px)
+         ============================================================ -->
+    <section id="work" class="bg-chart py-20 sm:py-24 lg:py-28">
+      <div class="wrap">
+        <div class="grid gap-6 lg:grid-cols-[1fr_1fr] lg:items-end">
+          <h2 class="h-section">Case notes</h2>
+          <p class="lede lg:justify-self-end">A few recent patients. All discharged in good health.</p>
+        </div>
+
+        <ul class="mt-12 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3">
+          <li class="col-span-2 lg:col-span-1 lg:row-span-2">
+            <button type="button" class="case group relative block h-full w-full overflow-hidden rounded-[22px] bg-navy text-left" data-full="images/work/unvented-cylinder.webp" data-caption="500 litre hot water cylinder with its expansion vessels piped in.">
+              <img src="images/work/unvented-cylinder-sm.webp" srcset="images/work/unvented-cylinder-sm.webp 800w, images/work/unvented-cylinder.webp 1600w" sizes="(min-width: 1024px) 380px, 100vw" alt="Large grey hot water cylinder with two blue expansion vessels on the wall beside it" width="602" height="800" loading="lazy" class="aspect-[4/3] h-full w-full object-cover transition duration-500 group-hover:scale-[1.03] lg:aspect-auto" />
+              <span class="absolute inset-x-3 bottom-3 rounded-2xl bg-white/95 px-4 py-3 backdrop-blur">
+                <span class="block font-display text-lg font-extrabold">500 litre cylinder</span>
+                <span class="block text-[15px] text-muted">Commercial hot water, expansion vessels and all.</span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="case group relative block w-full overflow-hidden rounded-[22px] bg-navy text-left" data-full="images/work/plant-room.webp" data-caption="Floor-standing boiler, hot water cylinder, pumps, valves and controls in one plant room.">
+              <img src="images/work/plant-room-sm.webp" srcset="images/work/plant-room-sm.webp 800w, images/work/plant-room.webp 1600w" sizes="(min-width: 1024px) 380px, 50vw" alt="Boiler room with a white floor-standing boiler, red expansion vessel, insulated pipework and a hot water cylinder" width="701" height="800" loading="lazy" class="aspect-[4/5] w-full object-cover transition duration-500 group-hover:scale-[1.03]" />
+              <span class="absolute inset-x-2 bottom-2 rounded-xl bg-white/95 px-3 py-2 backdrop-blur sm:inset-x-3 sm:bottom-3 sm:px-4 sm:py-3">
+                <span class="block font-display text-[15px] font-extrabold sm:text-lg">Plant room</span>
+                <span class="hidden text-[15px] text-muted sm:block">Boiler, cylinder, pumps and controls.</span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="case group relative block w-full overflow-hidden rounded-[22px] bg-navy text-left" data-full="images/work/kitchen-sink.webp" data-caption="New inset stainless steel sink with a twin-lever swan-neck mixer tap.">
+              <img src="images/work/kitchen-sink-sm.webp" srcset="images/work/kitchen-sink-sm.webp 800w, images/work/kitchen-sink.webp 1600w" sizes="(min-width: 1024px) 380px, 50vw" alt="New stainless steel kitchen sink with a chrome swan-neck mixer tap under a window" width="800" height="757" loading="lazy" class="aspect-[4/5] w-full object-cover transition duration-500 group-hover:scale-[1.03]" />
+              <span class="absolute inset-x-2 bottom-2 rounded-xl bg-white/95 px-3 py-2 backdrop-blur sm:inset-x-3 sm:bottom-3 sm:px-4 sm:py-3">
+                <span class="block font-display text-[15px] font-extrabold sm:text-lg">New sink and tap</span>
+                <span class="hidden text-[15px] text-muted sm:block">Stainless sink, swan-neck mixer.</span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="case group relative block w-full overflow-hidden rounded-[22px] bg-navy text-left" data-full="images/work/oil-boiler-service.webp" data-caption="Warmflow oil boiler with a Riello burner, opened up for its annual service.">
+              <img src="images/work/oil-boiler-service-sm.webp" srcset="images/work/oil-boiler-service-sm.webp 800w, images/work/oil-boiler-service.webp 1600w" sizes="(min-width: 1024px) 380px, 50vw" alt="Inside a Warmflow oil boiler showing the Riello burner, expansion vessel and pump" width="602" height="800" loading="lazy" class="aspect-[4/5] w-full object-cover transition duration-500 group-hover:scale-[1.03]" />
+              <span class="absolute inset-x-2 bottom-2 rounded-xl bg-white/95 px-3 py-2 backdrop-blur sm:inset-x-3 sm:bottom-3 sm:px-4 sm:py-3">
+                <span class="block font-display text-[15px] font-extrabold sm:text-lg">Oil boiler service</span>
+                <span class="hidden text-[15px] text-muted sm:block">Warmflow with a Riello burner.</span>
+              </span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="case group relative block w-full overflow-hidden rounded-[22px] bg-navy text-left" data-full="images/work/generator-fuel.webp" data-caption="Fuel filters changed on a diesel standby generator.">
+              <img src="images/work/generator-fuel-sm.webp" srcset="images/work/generator-fuel-sm.webp 800w, images/work/generator-fuel.webp 1600w" sizes="(min-width: 1024px) 380px, 50vw" alt="Green diesel generator engine with new fuel filters fitted" width="662" height="800" loading="lazy" class="aspect-[4/5] w-full object-cover transition duration-500 group-hover:scale-[1.03]" />
+              <span class="absolute inset-x-2 bottom-2 rounded-xl bg-white/95 px-3 py-2 backdrop-blur sm:inset-x-3 sm:bottom-3 sm:px-4 sm:py-3">
+                <span class="block font-display text-[15px] font-extrabold sm:text-lg">Standby generator</span>
+                <span class="hidden text-[15px] text-muted sm:block">Fresh fuel filters fitted.</span>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         HOW A HOUSE CALL WORKS (4 steps along a pipe)
+         ============================================================ -->
+    <section aria-labelledby="how-title" class="bg-white py-20 sm:py-24 lg:py-28">
+      <div class="wrap">
+        <h2 id="how-title" class="h-section">How a house call works</h2>
+
+        <ol class="relative mt-12 grid gap-10 lg:grid-cols-4 lg:gap-8">
+          <!-- the pipe joining the steps -->
+          <span class="pipe absolute !left-[23px] top-6 !h-[calc(100%-48px)] !w-[14px] rounded-full [background:linear-gradient(90deg,#8f4f22,#e9a46d_30%,#f6c9a2_42%,#c97a3f_65%,#8f4f22)] lg:!left-6 lg:top-[23px] lg:!h-[14px] lg:!w-[calc(100%-48px)] lg:[background:linear-gradient(180deg,#8f4f22,#e9a46d_30%,#f6c9a2_42%,#c97a3f_65%,#8f4f22)]" aria-hidden="true"></span>
+          <li class="relative grid grid-cols-[60px_1fr] gap-4 lg:block">
+            <span class="relative z-10 grid h-[60px] w-[60px] place-items-center rounded-2xl border-[3px] border-navy bg-sunny font-display text-2xl font-extrabold">1</span>
+            <div class="lg:mt-5"><h3 class="font-display text-xl font-extrabold">Describe the symptoms</h3><p class="mt-1.5 text-muted">Call, WhatsApp or use the form below. Photos of the problem help a lot.</p></div>
+          </li>
+          <li class="relative grid grid-cols-[60px_1fr] gap-4 lg:block">
+            <span class="relative z-10 grid h-[60px] w-[60px] place-items-center rounded-2xl border-[3px] border-navy bg-sunny font-display text-2xl font-extrabold">2</span>
+            <div class="lg:mt-5"><h3 class="font-display text-xl font-extrabold">Diagnosis and a free quote</h3><p class="mt-1.5 text-muted">We take a look, find the cause and tell you what it'll cost before any work starts.</p></div>
+          </li>
+          <li class="relative grid grid-cols-[60px_1fr] gap-4 lg:block">
+            <span class="relative z-10 grid h-[60px] w-[60px] place-items-center rounded-2xl border-[3px] border-navy bg-sunny font-display text-2xl font-extrabold">3</span>
+            <div class="lg:mt-5"><h3 class="font-display text-xl font-extrabold">Treatment</h3><p class="mt-1.5 text-muted">The job's done properly, and the mess is cleared up after.</p></div>
+          </li>
+          <li class="relative grid grid-cols-[60px_1fr] gap-4 lg:block">
+            <span class="relative z-10 grid h-[60px] w-[60px] place-items-center rounded-2xl border-[3px] border-navy bg-pulse font-display text-2xl font-extrabold">
+              <svg class="h-7 w-7" viewBox="0 0 24 24" fill="#073556" aria-label="4"><path d="M12 21s-7.5-4.6-9.5-9.2C1 8.3 3.4 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.6 0 6 3.8 4.5 7.3C19.5 16.4 12 21 12 21z"/></svg>
+            </span>
+            <div class="lg:mt-5"><h3 class="font-display text-xl font-extrabold">Back to full health</h3><p class="mt-1.5 text-muted">Hot showers, warm radiators and no more drips.</p></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT / BOOK A HOUSE CALL
+         Form posts to FormSubmit → the.plumb.doctor@outlook.com
+         (see README "Before going live" to activate it)
+         ============================================================ -->
+    <section id="contact" class="relative overflow-hidden bg-navy py-20 text-white sm:py-24 lg:py-28">
+      <div class="wrap grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
+        <div>
+          <h2 class="h-section">Book a house call</h2>
+          <p class="mt-5 max-w-[46ch] text-lg leading-relaxed text-scrubs/85">Tell us what's wrong and we'll get back to you. If it's urgent, ring. It's quicker.</p>
+
+          <div class="mt-9 grid gap-3">
+            <a href="tel:+447839100911" class="group flex items-center gap-4 rounded-2xl bg-white/[.06] p-4 transition hover:bg-white/10">
+              <span class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-sunny text-navy"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+              <span><span class="block text-sm text-scrubs/70">Call</span><span class="block font-display text-2xl font-extrabold">07839 100911</span></span>
+            </a>
+            <a href="https://wa.me/447839100911" target="_blank" rel="noopener" class="group flex items-center gap-4 rounded-2xl bg-white/[.06] p-4 transition hover:bg-white/10">
+              <span class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-pulse text-navy"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg></span>
+              <span><span class="block text-sm text-scrubs/70">WhatsApp</span><span class="block font-display text-2xl font-extrabold">Send a message</span></span>
+            </a>
+            <a href="mailto:the.plumb.doctor@outlook.com" class="group flex items-center gap-4 rounded-2xl bg-white/[.06] p-4 transition hover:bg-white/10">
+              <span class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-scrubs text-navy"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+              <span class="min-w-0"><span class="block text-sm text-scrubs/70">Email</span><span class="block font-display text-[16px] font-extrabold min-[400px]:text-lg sm:text-xl">the.plumb.doctor@outlook.com</span></span>
+            </a>
+          </div>
+
+          <ul class="mt-9 grid gap-2.5 text-[17px] text-scrubs">
+            <li class="flex items-start gap-3"><svg class="mt-0.5 h-6 w-6 shrink-0 text-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Friendly, honest, local tradesman</li>
+            <li class="flex items-start gap-3"><svg class="mt-0.5 h-6 w-6 shrink-0 text-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Competitive pricing and free quotes</li>
+            <li class="flex items-start gap-3"><svg class="mt-0.5 h-6 w-6 shrink-0 text-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Fully insured</li>
+            <li class="flex items-start gap-3"><svg class="mt-0.5 h-6 w-6 shrink-0 text-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>No job too big, no job too small</li>
+          </ul>
+        </div>
+
+        <div>
+          <form id="book-form" class="rounded-[28px] bg-white p-6 text-navy shadow-pad sm:p-8" action="https://formsubmit.co/the.plumb.doctor@outlook.com" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="New house call request from the website" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" />
+
+            <div class="grid gap-5 sm:grid-cols-2">
+              <label class="block"><span class="label">Your name</span>
+                <input class="field" type="text" name="name" autocomplete="name" required /></label>
+              <label class="block"><span class="label">Phone number</span>
+                <input class="field" type="tel" name="phone" autocomplete="tel" inputmode="tel" required /></label>
+              <label class="block sm:col-span-2"><span class="label">Email <span class="font-normal text-navy/50">(optional)</span></span>
+                <input class="field" type="email" name="email" autocomplete="email" /></label>
+              <label class="block"><span class="label">What's the problem?</span>
+                <select id="problem" class="field" name="problem" required>
+                  <option value="">Choose one</option>
+                  <option>No heating or hot water</option>
+                  <option>Radiators cold at the top</option>
+                  <option>Radiators cold at the bottom</option>
+                  <option>Banging, gurgling or kettling</option>
+                  <option>Pressure keeps dropping</option>
+                  <option>Dripping tap</option>
+                  <option>Leak or burst pipe</option>
+                  <option>Annual boiler service</option>
+                  <option>New boiler</option>
+                  <option>New hot water cylinder</option>
+                  <option>Bathroom</option>
+                  <option>Boiler breakdown cover</option>
+                  <option>Something else</option>
+                </select></label>
+              <label class="block"><span class="label">Parish</span>
+                <select class="field" name="parish">
+                  <option value="">Choose one</option>
+                  <option>Castel</option><option>Forest</option><option>St Andrew</option><option>St Martin</option>
+                  <option>St Peter Port</option><option>St Pierre du Bois</option><option>St Sampson</option>
+                  <option>St Saviour</option><option>Torteval</option><option>Vale</option><option>Somewhere else</option>
+                </select></label>
+              <label class="block sm:col-span-2"><span class="label">Tell us a bit more</span>
+                <textarea class="field min-h-[130px] resize-y" name="message" required placeholder="What's happening, and when did it start?"></textarea></label>
+              <fieldset class="sm:col-span-2">
+                <legend class="label">Best way to reach you</legend>
+                <div class="mt-2 flex flex-wrap gap-2">
+                  <label class="cursor-pointer"><input type="radio" name="contact_by" value="Call" class="peer sr-only" checked /><span class="block rounded-xl border-2 border-navy/15 px-4 py-2.5 font-semibold transition peer-checked:border-navy peer-checked:bg-navy peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-[3px] peer-focus-visible:outline-sunny">Call</span></label>
+                  <label class="cursor-pointer"><input type="radio" name="contact_by" value="WhatsApp" class="peer sr-only" /><span class="block rounded-xl border-2 border-navy/15 px-4 py-2.5 font-semibold transition peer-checked:border-navy peer-checked:bg-navy peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-[3px] peer-focus-visible:outline-sunny">WhatsApp</span></label>
+                  <label class="cursor-pointer"><input type="radio" name="contact_by" value="Email" class="peer sr-only" /><span class="block rounded-xl border-2 border-navy/15 px-4 py-2.5 font-semibold transition peer-checked:border-navy peer-checked:bg-navy peer-checked:text-white peer-focus-visible:outline peer-focus-visible:outline-[3px] peer-focus-visible:outline-sunny">Email</span></label>
+                </div>
+              </fieldset>
+            </div>
+
+            <button type="submit" class="btn-sunny mt-7 w-full"><span class="btn-label">Send to The Plumb Doctor</span></button>
+            <p id="form-status" class="hidden" role="alert"></p>
+          </form>
+
+          <div id="form-done" class="hidden rounded-[28px] bg-white p-8 text-center text-navy shadow-pad sm:p-10" tabindex="-1">
+            <span class="mx-auto grid h-16 w-16 place-items-center rounded-2xl bg-pulse"><svg class="h-9 w-9" viewBox="0 0 24 24" fill="none" stroke="#073556" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+            <h3 class="mt-5 font-display text-3xl font-extrabold">Sent to The Plumb Doctor</h3>
+            <p class="mx-auto mt-3 max-w-[36ch] text-muted">Thanks. We'll be in touch soon. If it's urgent, call 07839 100911.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="bg-navy-900 pb-28 pt-14 text-scrubs/80 lg:pb-14">
+    <div class="wrap grid gap-10 sm:grid-cols-[auto_1fr] sm:items-end">
+      <img src="images/brand/logo-full-white.svg" alt="The Plumb Doctor" width="930" height="1056" loading="lazy" class="h-28 w-auto" />
+      <div class="grid gap-2 sm:justify-items-end sm:text-right">
+        <p class="font-display text-lg font-extrabold text-white">The Plumb Doctor Ltd</p>
+        <p>Plumbing and heating in Guernsey</p>
+        <p><a href="tel:+447839100911" class="underline-offset-4 hover:underline">07839 100911</a></p>
+        <p><a href="mailto:the.plumb.doctor@outlook.com" class="underline-offset-4 hover:underline">the.plumb.doctor@outlook.com</a></p>
+      </div>
+    </div>
+    <div class="wrap mt-10">
+      <div class="flex flex-col gap-2 border-t border-white/10 pt-6 text-sm sm:flex-row sm:justify-between">
+        <p>&copy; <span id="year">2026</span> The Plumb Doctor Ltd</p>
+        <p>We fix pipes, not people. For a medical emergency, call 999.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile call bar -->
+  <div id="call-bar" class="fixed inset-x-0 bottom-0 z-40 grid grid-cols-2 gap-2 border-t border-navy/10 bg-white/95 p-3 pb-[max(.75rem,env(safe-area-inset-bottom))] backdrop-blur lg:hidden">
+    <a href="tel:+447839100911" class="btn-sunny !min-h-[48px] !text-base">Call now</a>
+    <a href="https://wa.me/447839100911" target="_blank" rel="noopener" class="btn-navy !min-h-[48px] !text-base">WhatsApp</a>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="fixed inset-0 z-[60] grid place-items-center bg-navy-900/95 p-4" role="dialog" aria-modal="true" aria-label="Photo viewer" aria-hidden="true">
+    <button id="lb-close" type="button" class="absolute right-3 top-3 grid h-12 w-12 place-items-center rounded-xl text-white hover:bg-white/10" aria-label="Close photo">
+      <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <figure class="flex max-h-full flex-col items-center">
+      <img id="lb-img" src="" alt="" class="max-h-[78svh] w-auto max-w-full rounded-2xl object-contain" />
+      <figcaption id="lb-cap" class="mt-4 max-w-[60ch] text-center text-scrubs"></figcaption>
+    </figure>
+    <button id="lb-prev" type="button" class="absolute left-2 top-1/2 grid h-12 w-12 -translate-y-1/2 place-items-center rounded-xl text-white hover:bg-white/10" aria-label="Previous photo"><svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+    <button id="lb-next" type="button" class="absolute right-2 top-1/2 grid h-12 w-12 -translate-y-1/2 place-items-center rounded-xl text-white hover:bg-white/10" aria-label="Next photo"><svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+  </div>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
