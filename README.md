@@ -36,18 +36,23 @@ The logo in `images/brand/` was traced to SVG from the supplied 480px JPG, so it
 - **New Tailwind classes** → run `npm install` once, then `npm run build` (or `npm run watch` while editing). If a class you added doesn't show up, it's because CSS wasn't rebuilt.
 - **Brand colours** → `tailwind.config.js` → rebuild.
 
-### Adding a gallery photo
+### Adding a case (job photo)
 1. Export it as two `.webp` files into `images/work/`: `name.webp` (~1600px long side) and `name-sm.webp` (~800px).
-2. In `index.html` find the `CASE NOTES` section and copy one `<li>…</li>`.
-3. Change the image `src`/`srcset`, `data-full`, `alt`, `data-caption` and the title + note text.
+2. In `index.html` find the `CASE NOTES` section and copy one `<li class="case-slide">…</li>`.
+3. Change the image `src`/`srcset`, `data-full`, `alt`, `data-caption`, the title, "Patient" and "Treatment".
+4. The "Case 1 of 5" counters and the dots update themselves.
+
+### Treatment picture tiles
+Each row in `TREATMENTS` has a `rx-tile`: either a photo from `images/work/` or a small inline SVG scene. Swap any SVG tile for a real photo once the client sends one (e.g. a finished bathroom).
 
 ## Before going live — checklist
 
 - [ ] Replace `https://www.example.gg` with the real domain (canonical, `og:url`, `og:image`, JSON-LD in `<head>`).
-- [ ] **Confirm the email address.** The newer services flyer says `the.plumb.doctor@outlook.com` (used everywhere on the site); the older Facebook banner says `the_plumb_doctor@hotmail.com`. Swap if needed.
-- [ ] **Activate the form:** submit the booking form once on the live site. FormSubmit emails an activation link to the address above — click it once and every request after that lands in the inbox.
+- [ ] **Point the form at the client.** For testing, the booking form currently sends to `toby1@greggs.org` (`action` on `#book-form`). Before handover, change it to the client's address.
+- [ ] **Confirm the client's email address.** The newer services flyer says `the.plumb.doctor@outlook.com` (shown on the site); the older Facebook banner says `the_plumb_doctor@hotmail.com`. Swap if needed.
+- [ ] **Activate the form:** FormSubmit emails an activation link the first time a form is submitted to a new address — click it once and every request after that lands in the inbox. This happens again when you switch the form to the client's email.
 - [ ] Optional: after activation FormSubmit gives a random alias for the email. Swap it into the form `action` so the address isn't in the page source.
-- [ ] Confirm the photo captions with the client, especially the standby generator one.
+- [ ] Confirm the case notes with the client, especially the standby generator and the 500 litre cylinder (did he fit it, or service it?).
 - [ ] Get the client to sign off the symptom checker first-aid tips and the service descriptions. Everything else is taken from their own flyers (free quotes, fully insured, breakdown cover, the rhyme).
 
 ## Images

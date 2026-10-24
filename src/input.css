@@ -73,7 +73,14 @@
   }
 
   /* ---------- Treatment chart rows ---------- */
-  .rx-row { @apply grid gap-x-6 gap-y-3 border-t-2 border-dashed border-navy/15 py-7 first:border-t-0 sm:grid-cols-[64px_1fr] lg:grid-cols-[64px_1.1fr_1fr] lg:items-center; }
+  .rx-row { @apply grid grid-cols-[92px_1fr] items-start gap-x-4 gap-y-1 border-t-2 border-dashed border-navy/15 py-5 first:border-t-0 sm:grid-cols-[168px_1fr] sm:gap-x-6 sm:py-7 lg:grid-cols-[210px_1.1fr_1fr] lg:items-center lg:gap-x-8; }
+  .rx-tile { @apply row-span-2 aspect-square overflow-hidden rounded-2xl bg-scrubs ring-2 ring-navy/10 sm:aspect-[4/3] lg:row-span-1; }
+  .rx-title { @apply font-display text-[1.3rem] font-extrabold leading-tight sm:text-2xl; }
+  .rx-desc { @apply mt-1.5 max-w-[46ch] text-[15px] leading-snug text-muted sm:text-base sm:leading-normal; }
+  .rx-note { @apply note col-start-2 mt-1 text-[22px] text-navy-600 sm:text-[25px] lg:col-start-auto lg:mt-0; }
+
+  /* ---------- "Discharged" rubber stamp on case notes ---------- */
+  .stamp { @apply inline-block -rotate-6 rounded-lg border-[3px] border-pulse-dark px-3 py-1 font-display text-xl font-extrabold text-pulse-dark; }
 
   /* ---------- Symptom chips ---------- */
   .chip {
@@ -107,6 +114,8 @@
 @keyframes tap { 0%, 100% { transform: rotate(0deg); } 25% { transform: rotate(-28deg); } 50% { transform: rotate(6deg); } 75% { transform: rotate(-20deg); } }
 @keyframes listen { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.08); } }
 @keyframes breathe { 0%, 100% { transform: scaleY(1); } 50% { transform: scaleY(1.012); } }
+@keyframes pipeflow { to { stroke-dashoffset: -20; } }
+@keyframes heatwave { 0% { transform: translateY(8px); opacity: 0; } 35% { opacity: 1; } 100% { transform: translateY(-12px); opacity: 0; } }
 @keyframes blink { 0%, 92%, 100% { transform: scaleY(1); } 95% { transform: scaleY(.1); } }
 
 /* ============================================================
@@ -119,6 +128,14 @@
 #patient.is-treating .st-treating { opacity: 1; }
 #patient.is-healthy .st-poorly, #patient.is-healthy .st-treating { opacity: 0; }
 #patient.is-healthy .st-healthy { opacity: 1; }
+/* radiator: frozen until the boiler's fixed */
+#patient.is-healthy .st-cold { opacity: 0; }
+/* water visibly flowing through the copper once healthy */
+#patient .flow-line { stroke-dasharray: 6 14; animation: pipeflow .8s linear infinite; }
+#patient .wave { transform-box: fill-box; transform-origin: center; }
+#patient.is-healthy .wave { animation: heatwave 2.4s ease-in-out infinite; }
+#patient.is-healthy .wave:nth-child(2) { animation-delay: .8s; }
+#patient.is-healthy .wave:nth-child(3) { animation-delay: 1.6s; }
 
 /* drip + puddle only while poorly / being treated */
 #patient .drop { transform-box: fill-box; transform-origin: center top; animation: drip 1.8s cubic-bezier(.55,0,1,.45) infinite; --fall: 54px; }

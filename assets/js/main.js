@@ -226,6 +226,51 @@
     if (opt) problem.value = opt.value || opt.text;
   });
 
+  /* ---------- Case notes slider (native swipe + arrows + dots) ---------- */
+  const track = $('#cases');
+  const slides = $$('.case-slide', track);
+  const dotsWrap = $('#case-dots');
+  const prevBtns = $$('.case-prev');
+  const nextBtns = $$('.case-next');
+  $$('.case-count', track).forEach((el, i) => { el.textContent = `Case ${i + 1} of ${slides.length}`; });
+  slides.forEach((_, i) => {
+    const d = document.createElement('button');
+    d.type = 'button';
+    d.className = 'h-3 w-3 rounded-full bg-navy/20 transition-all duration-300';
+    d.setAttribute('aria-label', `Show case ${i + 1}`);
+    d.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(d);
+  });
+  const dots = $$('button', dotsWrap);
+  let active = 0;
+  const goTo = (i) => {
+    const target = slides[Math.max(0, Math.min(slides.length - 1, i))];
+    track.scrollTo({ left: target.offsetLeft - track.offsetLeft, behavior: reduceMotion ? 'auto' : 'smooth' });
+  };
+  const syncSlider = () => {
+    const x = track.scrollLeft;
+    let best = 0;
+    slides.forEach((s, i) => {
+      if (Math.abs(s.offsetLeft - track.offsetLeft - x) < Math.abs(slides[best].offsetLeft - track.offsetLeft - x)) best = i;
+    });
+    active = best;
+    dots.forEach((d, i) => {
+      const on = i === active;
+      d.classList.toggle('bg-navy', on);
+      d.classList.toggle('w-8', on);
+      d.classList.toggle('bg-navy/20', !on);
+      d.setAttribute('aria-current', on ? 'true' : 'false');
+    });
+    prevBtns.forEach((b) => { b.disabled = active === 0; });
+    nextBtns.forEach((b) => { b.disabled = active === slides.length - 1; });
+  };
+  let syncRaf = 0;
+  track.addEventListener('scroll', () => { cancelAnimationFrame(syncRaf); syncRaf = requestAnimationFrame(syncSlider); }, { passive: true });
+  window.addEventListener('resize', syncSlider);
+  prevBtns.forEach((b) => b.addEventListener('click', () => goTo(active - 1)));
+  nextBtns.forEach((b) => b.addEventListener('click', () => goTo(active + 1)));
+  syncSlider();
+
   /* ---------- Gallery lightbox ---------- */
   const cases = $$('.case');
   const lb = $('#lightbox');

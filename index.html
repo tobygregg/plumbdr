@@ -113,19 +113,33 @@
          (Animation lives in assets/js/main.js → "Hero patient")
          ============================================================ -->
     <section id="top" class="graph-paper relative overflow-hidden pt-[72px]">
-      <div class="wrap grid min-h-[calc(100svh-72px)] items-center gap-4 pb-6 pt-4 lg:grid-cols-[1fr_1.05fr] lg:gap-10 lg:py-10">
+      <div class="wrap grid min-h-[calc(100svh-72px)] items-center gap-4 pb-6 pt-4 lg:grid-cols-[1.08fr_1fr] lg:gap-10 lg:py-10">
 
-        <div class="relative z-10 max-w-[560px]">
+        <div class="relative z-10 max-w-[600px]">
           <p class="note -rotate-3 text-[30px] text-navy-600 sm:text-[34px]">
             Poorly plumbing?
             <svg class="-mt-1 block h-3 w-44 text-sunny-dark" viewBox="0 0 176 12" fill="none" aria-hidden="true"><path d="M2 8c30-6 60-6 88-3s58 3 84-2" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
           </p>
-          <h1 class="mt-3 font-display text-[2.85rem] font-extrabold leading-[.95] tracking-[-0.035em] sm:text-[4rem] lg:text-[4.9rem]">
-            The doctor will see you now.
+          <h1 class="mt-3 font-display text-[2.45rem] font-extrabold leading-[.95] tracking-[-0.035em] min-[400px]:text-[2.6rem] sm:text-[3.6rem] lg:text-[4.1rem] xl:text-[4.4rem]">
+            <span class="whitespace-nowrap">The Plumb Doctor</span> will see you now.
           </h1>
-          <p class="mt-5 max-w-[46ch] text-[17px] leading-relaxed text-navy/80 sm:text-lg">
-            Plumbing and heating across Guernsey, from a new tap washer to a brand-new boiler. Friendly, honest, fully insured, and quotes are free.
+          <p class="mt-5 max-w-[44ch] text-[17px] leading-relaxed text-navy/80 sm:text-lg">
+            <strong class="font-bold text-navy">Plumbing and heating engineer in Guernsey.</strong> Friendly, honest and fully insured, with free quotes.
           </p>
+
+          <!-- what we fix, at a glance -->
+          <ul class="mt-5 flex flex-wrap gap-1.5 text-[14px] font-semibold sm:gap-2 sm:text-[15px]" aria-label="Services">
+            <li class="flex items-center gap-1.5 rounded-full border-2 border-navy/10 bg-white/75 py-1.5 pl-2 pr-3">
+              <svg class="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="none" stroke="#073556" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2.5" width="14" height="19" rx="3"/><path d="M12 9.5c3 3 3.5 6 0 8-3.5-2-3-5 0-8z" fill="#FFC93C"/></svg>Boilers</li>
+            <li class="flex items-center gap-1.5 rounded-full border-2 border-navy/10 bg-white/75 py-1.5 pl-2 pr-3">
+              <svg class="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="none" stroke="#073556" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2.5"/><path d="M7.5 9v6M12 9v6M16.5 9v6"/></svg>Radiators</li>
+            <li class="flex items-center gap-1.5 rounded-full border-2 border-navy/10 bg-white/75 py-1.5 pl-2 pr-3">
+              <svg class="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="none" stroke="#073556" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="10" height="20" rx="5"/><circle cx="20" cy="8" r="2.5" fill="#FFC93C"/></svg>Cylinders</li>
+            <li class="flex items-center gap-1.5 rounded-full border-2 border-navy/10 bg-white/75 py-1.5 pl-2 pr-3">
+              <svg class="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="none" stroke="#073556" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M2 8h9a4 4 0 0 1 4 4v1h-4v-1H2z"/><path d="M7 8V5M4.5 5h5"/><path d="M13 16q2.5 3 0 5q-2.5-2 0-5z" fill="#7CC4F0"/></svg>Leaks</li>
+            <li class="flex items-center gap-1.5 rounded-full border-2 border-navy/10 bg-white/75 py-1.5 pl-2 pr-3">
+              <svg class="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="none" stroke="#073556" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M2.5 12h19v2a6 6 0 0 1-6 6h-7a6 6 0 0 1-6-6z"/><path d="M5 12V6a2.5 2.5 0 0 1 5 0"/></svg>Bathrooms</li>
+          </ul>
 
           <div class="mt-7 flex flex-wrap gap-3">
             <a href="tel:+447839100911" class="btn-sunny flex-1 sm:flex-none">
@@ -137,35 +151,25 @@
               WhatsApp
             </a>
           </div>
-
-          <ul class="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-[15px] font-semibold text-navy/80">
-            <li class="flex items-center gap-1.5"><svg class="h-5 w-5 text-pulse-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Free quotes</li>
-            <li class="flex items-center gap-1.5"><svg class="h-5 w-5 text-pulse-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Fully insured</li>
-            <li class="flex items-center gap-1.5"><svg class="h-5 w-5 text-pulse-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Local tradesman</li>
-          </ul>
         </div>
-
-        <!-- Hero illustration: patient monitor + poorly boiler -->
+        <!-- Hero illustration: patient monitor, poorly boiler + frozen radiator -->
         <div class="relative mx-auto w-full max-w-[400px] sm:max-w-[520px] lg:max-w-none">
-          <svg id="patient" class="is-poorly h-auto w-full max-h-[38svh] lg:max-h-[72svh]" viewBox="0 0 620 540" role="img" aria-labelledby="patient-title">
-            <title id="patient-title">A cartoon boiler on a patient monitor goes from poorly to healthy after a quick fix with a wrench.</title>
+          <svg id="patient" class="is-poorly h-auto w-full max-h-[40svh] lg:max-h-[74svh]" viewBox="0 0 620 540" role="img" aria-labelledby="patient-title">
+            <title id="patient-title">A cartoon boiler and a frozen radiator on a patient monitor. After a quick fix with a wrench the boiler smiles, hot water flows through the pipes and the radiator warms up.</title>
             <defs>
               <clipPath id="screen-clip"><rect x="40" y="52" width="238" height="128" rx="10"/></clipPath>
               <pattern id="screen-grid" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#2ED39B" stroke-opacity=".14"/></pattern>
               <linearGradient id="tube-fade" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="150"><stop offset="0" stop-color="#073556" stop-opacity="0"/><stop offset="1" stop-color="#073556"/></linearGradient>
+              <linearGradient id="rad-warm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE9CC"/><stop offset="1" stop-color="#FFBE94"/></linearGradient>
               <mask id="jaw"><rect x="-40" y="-40" width="160" height="80" fill="#fff"/><rect x="-24" y="-6.5" width="22" height="13" fill="#000"/></mask>
             </defs>
 
             <!-- soft backdrop + floor shadow -->
             <circle cx="330" cy="290" r="252" fill="#EAF3FA"/>
             <ellipse cx="438" cy="506" rx="128" ry="10" fill="#073556" opacity=".1"/>
-            <ellipse cx="159" cy="490" rx="70" ry="7" fill="#073556" opacity=".1"/>
 
             <!-- MONITOR -->
             <g>
-              <rect x="152" y="236" width="14" height="236" rx="4" fill="#073556"/>
-              <rect x="104" y="468" width="110" height="14" rx="7" fill="#073556"/>
-              <circle cx="114" cy="488" r="6" fill="#073556"/><circle cx="204" cy="488" r="6" fill="#073556"/>
               <rect x="24" y="36" width="270" height="206" rx="24" fill="#073556"/>
               <rect x="40" y="52" width="238" height="128" rx="10" fill="#04223A"/>
               <rect x="40" y="52" width="238" height="128" fill="url(#screen-grid)"/>
@@ -176,7 +180,7 @@
                   <path class="st st-healthy" d="M40 128 h26 l7 -7 l7 7 h8 l5 -48 l7 72 l6 -24 h14 l9 -12 l9 12 h22 h26 l7 -7 l7 7 h8 l5 -48 l7 72 l6 -24 h14 l9 -12 l9 12 h22 h26 l7 -7 l7 7 h8 l5 -48 l7 72 l6 -24 h14 l9 -12 l9 12 h22 h26 l7 -7 l7 7 h8 l5 -48 l7 72 l6 -24 h14 l9 -12 l9 12 h22" fill="none" stroke="#2ED39B" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
                 </g>
               </g>
-              <text x="52" y="72" font-family="Figtree, sans-serif" font-size="13" font-weight="600" fill="#D5E7F3" opacity=".7">Patient: boiler</text>
+              <text x="52" y="72" font-family="Figtree, sans-serif" font-size="13" font-weight="600" fill="#D5E7F3" opacity=".7">Patient: heating system</text>
               <path class="st st-healthy" d="M262 64c-2.5-3.5-8-2.4-8 1.6 0 3.4 5 6.4 8 8.6 3-2.2 8-5.2 8-8.6 0-4-5.5-5.1-8-1.6z" fill="#2ED39B"/>
 
               <!-- status pill -->
@@ -187,6 +191,45 @@
               </g>
               <text x="174" y="207" font-family="Figtree, sans-serif" font-size="12" font-weight="600" fill="#D5E7F3" opacity=".7">Water temp</text>
               <text id="temp-val" x="174" y="230" font-family="'Bricolage Grotesque', sans-serif" font-size="24" font-weight="800" fill="#fff">12°C</text>
+            </g>
+
+            <!-- RADIATOR, piped into the boiler -->
+            <g>
+              <!-- flow + return pipes -->
+              <g fill="none" stroke-linejoin="round">
+                <path d="M54 452 V484 H334" stroke="#C97A3F" stroke-width="12"/>
+                <path d="M60 481 H334" stroke="#F0B07C" stroke-width="3"/>
+                <path d="M258 452 V464 H334" stroke="#C97A3F" stroke-width="12"/>
+                <path d="M264 461 H334" stroke="#F0B07C" stroke-width="3"/>
+                <path class="st st-healthy flow-line" d="M334 464 H258 V452" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+                <path class="st st-healthy flow-line" d="M54 452 V484 H334" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+              </g>
+              <!-- valves: thermostatic on the left, red lockshield on the right -->
+              <rect x="47" y="452" width="14" height="13" rx="2" fill="#D9B24A" stroke="#8A6B1C" stroke-width="2"/>
+              <rect x="22" y="446" width="24" height="24" rx="7" fill="#fff" stroke="#073556" stroke-width="4"/>
+              <path d="M28 455 h12 M28 461 h12" stroke="#073556" stroke-width="2.5" stroke-linecap="round" opacity=".5"/>
+              <rect x="251" y="452" width="14" height="13" rx="2" fill="#D9B24A" stroke="#8A6B1C" stroke-width="2"/>
+              <rect x="266" y="449" width="17" height="17" rx="4" fill="#FF6A55" stroke="#073556" stroke-width="3"/>
+              <!-- panel -->
+              <rect x="36" y="318" width="240" height="134" rx="12" fill="#fff" stroke="#073556" stroke-width="6"/>
+              <rect class="st st-cold" x="39" y="321" width="234" height="128" rx="9" fill="#DDEFFC"/>
+              <rect class="st st-healthy" x="39" y="321" width="234" height="128" rx="9" fill="url(#rad-warm)"/>
+              <path d="M60 336 V434 M76 336 V434 M92 336 V434 M108 336 V434 M124 336 V434 M140 336 V434 M156 336 V434 M172 336 V434 M188 336 V434 M204 336 V434 M220 336 V434 M236 336 V434 M252 336 V434" stroke="#073556" stroke-opacity=".18" stroke-width="5" stroke-linecap="round"/>
+              <rect x="261" y="324" width="9" height="9" rx="2" fill="#073556"/>
+              <!-- cold: icicles, frost, shivers -->
+              <g class="st st-cold">
+                <path d="M84 452 l6 16 l6 -16z M128 452 l5 12 l5 -12z M176 452 l7 19 l7 -19z M218 452 l5 11 l5 -11z" fill="#BFE3FA" stroke="#073556" stroke-width="2.5" stroke-linejoin="round"/>
+                <path d="M74 352 l10 10 M84 352 l-10 10 M79 349 v16 M71 357 h16" stroke="#7CC4F0" stroke-width="3" stroke-linecap="round"/>
+                <path d="M206 392 l8 8 M214 392 l-8 8 M210 389 v14 M203 396 h14" stroke="#7CC4F0" stroke-width="3" stroke-linecap="round"/>
+                <path d="M18 358 l-9 4 M18 376 l-11 -1 M18 394 l-9 -5" stroke="#073556" stroke-width="3" stroke-linecap="round"/>
+                <text x="26" y="300" font-family="Caveat, cursive" font-size="28" font-weight="700" fill="#1C527D" transform="rotate(-8 26 300)">brrr!</text>
+              </g>
+              <!-- warm: heat rising -->
+              <g class="st st-healthy" fill="none" stroke="#FF8A5C" stroke-width="4" stroke-linecap="round">
+                <path class="wave" d="M96 306 q-7 -8 0 -16 t0 -16 t0 -14"/>
+                <path class="wave" d="M156 306 q-7 -8 0 -16 t0 -16 t0 -14"/>
+                <path class="wave" d="M216 306 q-7 -8 0 -16 t0 -16 t0 -14"/>
+              </g>
             </g>
 
             <!-- STETHOSCOPE tube (comes in from the top) -->
@@ -208,6 +251,7 @@
               <path d="M538 426 H624" stroke="#F0B07C" stroke-width="3"/>
               <path d="M538 458 H624" stroke="#C97A3F" stroke-width="13"/>
               <path d="M538 454 H624" stroke="#F0B07C" stroke-width="3"/>
+              <path class="st st-healthy flow-line" d="M538 430 H624" stroke="#fff" stroke-width="3" fill="none"/>
             </g>
             <rect x="562" y="419" width="22" height="22" rx="4" fill="#D9B24A" stroke="#8A6B1C" stroke-width="2"/>
             <ellipse class="puddle" cx="574" cy="508" rx="24" ry="5.5" fill="#7CC4F0" opacity=".8"/>
@@ -344,7 +388,8 @@
 
     <!-- ============================================================
          TREATMENTS (services)
-         EDIT: one row per service — copy a <div class="rx-row"> to add one
+         EDIT: one row per service — copy a <div class="rx-row"> to add one.
+         Each row has a picture tile: a photo from images/work/ or a little SVG scene.
          ============================================================ -->
     <section id="treatments" class="bg-chart py-20 sm:py-24 lg:py-28">
       <div class="wrap">
@@ -353,63 +398,134 @@
           <p class="lede lg:justify-self-end">Plumbing and heating for homes and businesses around the island. No job too big, no job too small.</p>
         </div>
 
-        <div class="mt-12 rounded-[28px] border-2 border-navy/10 bg-white px-5 sm:px-8 lg:px-10">
-          <div class="hidden grid-cols-[64px_1.1fr_1fr] gap-x-6 border-b-2 border-navy pb-3 pt-6 text-[15px] font-bold text-navy/60 lg:grid">
+        <div class="mt-12 rounded-[28px] border-2 border-navy/10 bg-white px-4 sm:px-8 lg:px-10">
+          <div class="hidden grid-cols-[210px_1.1fr_1fr] gap-x-8 border-b-2 border-navy pb-3 pt-6 text-[15px] font-bold text-navy/60 lg:grid">
             <span></span><span>Treatment</span><span>Good for</span>
           </div>
 
+          <!-- Boiler installations (photo) -->
           <div class="rx-row">
-            <svg class="h-14 w-14" viewBox="0 0 56 56" fill="none" stroke="#073556" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><rect x="12" y="7" width="32" height="44" rx="6" fill="#fff"/><path d="M12 19h32"/><path d="M28 27c6 6 7 12 0 16-7-4-6-10 0-16z" fill="#FFC93C"/><path d="M47 4l1.5 3.5L52 9l-3.5 1.5L47 14l-1.5-3.5L42 9l3.5-1.5z" fill="#FFC93C" stroke-width="2"/></svg>
-            <div>
-              <h3 class="font-display text-2xl font-extrabold">Boiler installations</h3>
-              <p class="mt-1.5 max-w-[46ch] text-muted">New boilers supplied and fitted, with the controls set up and explained before we leave.</p>
+            <div class="rx-tile">
+              <img src="images/work/plant-room-sm.webp" alt="Floor-standing boiler with its pumps, valves and controls" width="701" height="800" loading="lazy" class="h-full w-full object-cover object-[50%_55%]" />
             </div>
-            <p class="note text-[25px] text-navy-600 sm:col-start-2 lg:col-start-auto">an old boiler on its last legs</p>
+            <div>
+              <h3 class="rx-title">Boiler installations</h3>
+              <p class="rx-desc">New boilers supplied and fitted, with the controls set up and explained before we leave.</p>
+            </div>
+            <p class="rx-note">an old boiler on its last legs</p>
           </div>
 
+          <!-- Annual servicing (illustration: happy boiler + clipboard) -->
           <div class="rx-row">
-            <svg class="h-14 w-14" viewBox="0 0 56 56" fill="none" stroke="#073556" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><rect x="10" y="9" width="36" height="43" rx="5" fill="#fff"/><rect x="20" y="5" width="16" height="9" rx="3" fill="#FFC93C"/><path d="M17 25l3.5 3.5L27 22M17 38l3.5 3.5L27 35M32 26h7M32 39h7"/></svg>
-            <div>
-              <h3 class="font-display text-2xl font-extrabold">Annual boiler servicing</h3>
-              <p class="mt-1.5 max-w-[46ch] text-muted">A yearly check-up for your oil boiler: cleaned, tested and tuned so it runs safely and efficiently.</p>
+            <div class="rx-tile graph-paper">
+              <svg class="h-full w-full" viewBox="0 0 200 150" aria-hidden="true">
+                <ellipse cx="96" cy="138" rx="46" ry="5" fill="#073556" opacity=".12"/>
+                <rect x="86" y="18" width="18" height="26" fill="#fff" stroke="#073556" stroke-width="4"/>
+                <rect x="60" y="40" width="72" height="96" rx="11" fill="#fff" stroke="#073556" stroke-width="4"/>
+                <rect x="64" y="44" width="64" height="20" rx="6" fill="#073556"/>
+                <circle cx="118" cy="54" r="4" fill="#2ED39B"/><circle cx="76" cy="54" r="5" fill="#D5E7F3"/>
+                <circle cx="84" cy="88" r="4.5" fill="#073556"/><circle cx="108" cy="88" r="4.5" fill="#073556"/>
+                <path d="M84 102 q12 12 24 0z" fill="#073556" stroke="#073556" stroke-width="3" stroke-linejoin="round"/>
+                <ellipse cx="74" cy="100" rx="5" ry="3" fill="#FF6A55" opacity=".45"/><ellipse cx="118" cy="100" rx="5" ry="3" fill="#FF6A55" opacity=".45"/>
+                <g transform="rotate(9 158 92)">
+                  <rect x="136" y="62" width="44" height="60" rx="6" fill="#fff" stroke="#073556" stroke-width="4"/>
+                  <rect x="149" y="56" width="18" height="10" rx="3" fill="#FFC93C" stroke="#073556" stroke-width="3"/>
+                  <path d="M144 80 l4 4 l7 -8 M144 98 l4 4 l7 -8" fill="none" stroke="#14A673" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M160 81 h12 M160 99 h12" stroke="#073556" stroke-width="3" stroke-linecap="round" opacity=".4"/>
+                </g>
+                <path d="M40 34c-2-3-7-2-7 1.5 0 3 4.5 5.5 7 7.5 2.5-2 7-4.5 7-7.5 0-3.5-5-4.5-7-1.5z" fill="#2ED39B"/>
+              </svg>
             </div>
-            <p class="note text-[25px] text-navy-600 sm:col-start-2 lg:col-start-auto">staying healthy (and keeping the warranty valid)</p>
+            <div>
+              <h3 class="rx-title">Annual boiler servicing</h3>
+              <p class="rx-desc">A yearly check-up for your oil boiler: cleaned, tested and tuned so it runs safely and efficiently.</p>
+            </div>
+            <p class="rx-note">staying healthy (and keeping the warranty valid)</p>
           </div>
 
+          <!-- Breakdowns (illustration: poorly boiler with plasters) -->
           <div class="rx-row">
-            <svg class="h-14 w-14" viewBox="0 0 56 56" fill="none" stroke="#073556" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><rect x="10" y="8" width="36" height="42" rx="6" fill="#fff"/><g transform="rotate(-35 28 30)"><rect x="12" y="25" width="32" height="10" rx="5" fill="#FFC93C"/><rect x="23" y="25" width="10" height="10" fill="#FFE08A"/></g><g transform="rotate(35 28 30)"><rect x="12" y="25" width="32" height="10" rx="5" fill="#FFC93C"/></g><circle cx="28" cy="30" r="1.6" fill="#073556" stroke="none"/></svg>
-            <div>
-              <h3 class="font-display text-2xl font-extrabold">Breakdowns and repairs</h3>
-              <p class="mt-1.5 max-w-[46ch] text-muted">No heating, no hot water, strange noises. We find the fault and fix it. Ask about our boiler breakdown cover.</p>
+            <div class="rx-tile bg-[#FFE7E2]">
+              <svg class="h-full w-full" viewBox="0 0 200 150" aria-hidden="true">
+                <ellipse cx="90" cy="138" rx="46" ry="5" fill="#073556" opacity=".12"/>
+                <rect x="80" y="18" width="18" height="26" fill="#fff" stroke="#073556" stroke-width="4"/>
+                <rect x="54" y="40" width="72" height="96" rx="11" fill="#fff" stroke="#073556" stroke-width="4"/>
+                <rect x="58" y="44" width="64" height="20" rx="6" fill="#073556"/>
+                <circle cx="112" cy="54" r="4" fill="#FF6A55"/><circle cx="70" cy="54" r="5" fill="#D5E7F3"/>
+                <path d="M72 80 l10 -3 M108 80 l-10 -3" stroke="#073556" stroke-width="3.5" stroke-linecap="round"/>
+                <circle cx="78" cy="90" r="4.5" fill="#073556"/><circle cx="102" cy="90" r="4.5" fill="#073556"/>
+                <path d="M78 112 q12 -10 24 0" fill="none" stroke="#073556" stroke-width="4" stroke-linecap="round"/>
+                <path d="M112 94 q4 6 0 9 q-4 -3 0 -9z" fill="#7CC4F0"/>
+                <g transform="translate(70 124)">
+                  <rect x="-14" y="-5" width="28" height="10" rx="5" fill="#FFC93C" stroke="#073556" stroke-width="2.5" transform="rotate(-30)"/>
+                  <rect x="-14" y="-5" width="28" height="10" rx="5" fill="#FFC93C" stroke="#073556" stroke-width="2.5" transform="rotate(30)"/>
+                </g>
+                <g transform="translate(156 92) rotate(-40)">
+                  <rect x="-5" y="-26" width="10" height="56" rx="5" fill="#073556"/>
+                  <circle cx="0" cy="-30" r="12" fill="#073556"/>
+                  <rect x="-4.5" y="-46" width="9" height="15" fill="#FFE7E2"/>
+                </g>
+                <path d="M146 30 l8 -10 M160 36 l12 -6 M140 22 l-1 -12" stroke="#FF6A55" stroke-width="3.5" stroke-linecap="round"/>
+              </svg>
             </div>
-            <p class="note text-[25px] text-navy-600 sm:col-start-2 lg:col-start-auto">cold showers and colder radiators</p>
+            <div>
+              <h3 class="rx-title">Breakdowns and repairs</h3>
+              <p class="rx-desc">No heating, no hot water, strange noises. We find the fault and fix it. Ask about our boiler breakdown cover.</p>
+            </div>
+            <p class="rx-note">cold showers and colder radiators</p>
           </div>
 
+          <!-- Cylinders (photo) -->
           <div class="rx-row">
-            <svg class="h-14 w-14" viewBox="0 0 56 56" fill="none" stroke="#073556" stroke-width="3" stroke-linejoin="round" aria-hidden="true"><rect x="10" y="5" width="22" height="47" rx="11" fill="#fff"/><path d="M32 18h6"/><circle cx="45" cy="18" r="7" fill="#FFC93C"/><path d="M15 15h12" stroke-linecap="round"/></svg>
-            <div>
-              <h3 class="font-display text-2xl font-extrabold">Cylinder installations</h3>
-              <p class="mt-1.5 max-w-[46ch] text-muted">Hot water cylinders and expansion vessels, plus the valves that keep them safe, fitted and set up properly.</p>
+            <div class="rx-tile">
+              <img src="images/work/unvented-cylinder-sm.webp" alt="Large hot water cylinder with blue expansion vessels" width="602" height="800" loading="lazy" class="h-full w-full object-cover object-[50%_40%]" />
             </div>
-            <p class="note text-[25px] text-navy-600 sm:col-start-2 lg:col-start-auto">lukewarm, slow or no hot water</p>
+            <div>
+              <h3 class="rx-title">Cylinder installations</h3>
+              <p class="rx-desc">Hot water cylinders and expansion vessels, plus the valves that keep them safe, fitted and set up properly.</p>
+            </div>
+            <p class="rx-note">lukewarm, slow or no hot water</p>
           </div>
 
+          <!-- Bathrooms (illustration: bath, bubbles, rubber duck) -->
           <div class="rx-row">
-            <svg class="h-14 w-14" viewBox="0 0 56 56" fill="none" stroke="#073556" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M6 30h44v6a12 12 0 0 1-12 12H18A12 12 0 0 1 6 36z" fill="#fff"/><path d="M14 48l-2 4M42 48l2 4"/><path d="M12 30V12a5 5 0 0 1 10 0v1"/><path d="M17 13h10" /><g fill="#7CC4F0" stroke="none"><circle cx="20" cy="20" r="2"/><circle cx="25" cy="23" r="2"/><circle cx="21" cy="26" r="1.6"/></g><circle cx="38" cy="25" r="4" fill="#FFC93C"/><circle cx="44" cy="22" r="2.5" fill="#FFC93C"/></svg>
-            <div>
-              <h3 class="font-display text-2xl font-extrabold">Bathrooms</h3>
-              <p class="mt-1.5 max-w-[46ch] text-muted">From swapping a toilet or basin to fitting a whole new bathroom suite.</p>
+            <div class="rx-tile graph-paper">
+              <svg class="h-full w-full" viewBox="0 0 200 150" aria-hidden="true">
+                <path d="M158 16 v10 a10 10 0 0 1 -10 10 h-6" fill="none" stroke="#073556" stroke-width="4" stroke-linecap="round"/>
+                <path d="M128 30 h16 l-3 10 h-10z" fill="#D5E7F3" stroke="#073556" stroke-width="3.5" stroke-linejoin="round"/>
+                <path d="M131 46 l-2 7 M137 46 v8 M143 46 l2 7" stroke="#7CC4F0" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="62" cy="70" r="11" fill="#fff" stroke="#073556" stroke-width="3"/>
+                <circle cx="82" cy="62" r="14" fill="#fff" stroke="#073556" stroke-width="3"/>
+                <circle cx="100" cy="72" r="9" fill="#fff" stroke="#073556" stroke-width="3"/>
+                <circle cx="46" cy="58" r="5" fill="#fff" stroke="#073556" stroke-width="2.5"/>
+                <g>
+                  <path d="M118 78 q-2 -14 12 -14 q14 0 14 14z" fill="#FFC93C" stroke="#073556" stroke-width="3" stroke-linejoin="round"/>
+                  <circle cx="138" cy="58" r="9" fill="#FFC93C" stroke="#073556" stroke-width="3"/>
+                  <path d="M146 58 l8 2 l-8 3z" fill="#FF6A55" stroke="#073556" stroke-width="2" stroke-linejoin="round"/>
+                  <circle cx="140" cy="55" r="1.8" fill="#073556"/>
+                </g>
+                <rect x="28" y="76" width="144" height="12" rx="6" fill="#fff" stroke="#073556" stroke-width="4"/>
+                <path d="M36 88 h128 v6 a28 28 0 0 1 -28 28 h-72 a28 28 0 0 1 -28 -28z" fill="#fff" stroke="#073556" stroke-width="4" stroke-linejoin="round"/>
+                <path d="M56 122 l-6 14 M144 122 l6 14" stroke="#073556" stroke-width="5" stroke-linecap="round"/>
+              </svg>
             </div>
-            <p class="note text-[25px] text-navy-600 sm:col-start-2 lg:col-start-auto">a bathroom that's seen better days</p>
+            <div>
+              <h3 class="rx-title">Bathrooms</h3>
+              <p class="rx-desc">From swapping a toilet or basin to fitting a whole new bathroom suite.</p>
+            </div>
+            <p class="rx-note">a bathroom that's seen better days</p>
           </div>
 
+          <!-- General plumbing (photo) -->
           <div class="rx-row">
-            <svg class="h-14 w-14" viewBox="0 0 56 56" fill="none" stroke="#073556" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M4 18h22a10 10 0 0 1 10 10v4h-8v-3a3 3 0 0 0-3-3H4z" fill="#fff"/><path d="M18 18v-6M12 12h12"/><path d="M32 38q5 7 0 11q-5-4 0-11z" fill="#FFC93C"/></svg>
-            <div>
-              <h3 class="font-display text-2xl font-extrabold">General plumbing</h3>
-              <p class="mt-1.5 max-w-[46ch] text-muted">Dripping taps, leaks, new sinks and taps, toilets that won't stop running. Nothing's too small.</p>
+            <div class="rx-tile">
+              <img src="images/work/kitchen-sink-sm.webp" alt="New stainless steel kitchen sink with a chrome swan-neck mixer tap" width="800" height="757" loading="lazy" class="h-full w-full object-cover object-[45%_40%]" />
             </div>
-            <p class="note text-[25px] text-navy-600 sm:col-start-2 lg:col-start-auto">drip… drip… drip…</p>
+            <div>
+              <h3 class="rx-title">General plumbing</h3>
+              <p class="rx-desc">Dripping taps, leaks, new sinks and taps, toilets that won't stop running. Nothing's too small.</p>
+            </div>
+            <p class="rx-note">drip… drip… drip…</p>
           </div>
         </div>
       </div>
@@ -525,64 +641,124 @@
     </section>
 
     <!-- ============================================================
-         CASE NOTES (gallery)
-         EDIT: copy a <li> to add a photo. Images go in images/work/
-         as name.webp (1600px) + name-sm.webp (800px)
+         CASE NOTES (one job at a time — swipe on phones, arrows on desktop)
+         EDIT: copy one <li class="case-slide"> to add a job. Images go in
+         images/work/ as name.webp (1600px) + name-sm.webp (800px).
+         The "Case 1 of 5" counters update themselves.
          ============================================================ -->
     <section id="work" class="bg-chart py-20 sm:py-24 lg:py-28">
       <div class="wrap">
-        <div class="grid gap-6 lg:grid-cols-[1fr_1fr] lg:items-end">
-          <h2 class="h-section">Case notes</h2>
-          <p class="lede lg:justify-self-end">A few recent patients. All discharged in good health.</p>
+        <div class="flex flex-wrap items-end justify-between gap-6">
+          <div>
+            <h2 class="h-section">Case notes</h2>
+            <p class="lede mt-4">A few recent patients. All discharged in good health.</p>
+          </div>
+          <div class="hidden gap-2 sm:flex">
+            <button type="button" class="case-prev grid h-12 w-12 place-items-center rounded-xl border-2 border-navy/15 bg-white text-navy transition hover:border-navy disabled:opacity-35" aria-label="Previous case"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+            <button type="button" class="case-next grid h-12 w-12 place-items-center rounded-xl border-2 border-navy/15 bg-white text-navy transition hover:border-navy disabled:opacity-35" aria-label="Next case"><svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+          </div>
         </div>
+      </div>
 
-        <ul class="mt-12 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3">
-          <li class="col-span-2 lg:col-span-1 lg:row-span-2">
-            <button type="button" class="case group relative block h-full w-full overflow-hidden rounded-[22px] bg-navy text-left" data-full="images/work/unvented-cylinder.webp" data-caption="500 litre hot water cylinder with its expansion vessels piped in.">
-              <img src="images/work/unvented-cylinder-sm.webp" srcset="images/work/unvented-cylinder-sm.webp 800w, images/work/unvented-cylinder.webp 1600w" sizes="(min-width: 1024px) 380px, 100vw" alt="Large grey hot water cylinder with two blue expansion vessels on the wall beside it" width="602" height="800" loading="lazy" class="aspect-[4/3] h-full w-full object-cover transition duration-500 group-hover:scale-[1.03] lg:aspect-auto" />
-              <span class="absolute inset-x-3 bottom-3 rounded-2xl bg-white/95 px-4 py-3 backdrop-blur">
-                <span class="block font-display text-lg font-extrabold">500 litre cylinder</span>
-                <span class="block text-[15px] text-muted">Commercial hot water, expansion vessels and all.</span>
-              </span>
-            </button>
+      <div class="wrap mt-10 !pr-0 sm:!pr-6 lg:!pr-8">
+        <ul id="cases" class="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-1 pr-4 [scrollbar-width:none] sm:gap-6 sm:pr-0 [&::-webkit-scrollbar]:hidden" aria-label="Case notes">
+
+          <li class="case-slide w-[86%] shrink-0 snap-start sm:w-full">
+            <article class="grid h-full overflow-hidden rounded-[28px] border-2 border-navy/10 bg-white lg:grid-cols-[1.2fr_1fr]">
+              <button type="button" class="case group relative block overflow-hidden bg-navy" data-full="images/work/oil-boiler-service.webp" data-caption="Warmflow oil boiler with a Riello burner, opened up for its annual service.">
+                <img src="images/work/oil-boiler-service-sm.webp" srcset="images/work/oil-boiler-service-sm.webp 800w, images/work/oil-boiler-service.webp 1600w" sizes="(min-width: 1024px) 640px, 90vw" alt="Inside a Warmflow oil boiler showing the Riello burner, expansion vessel and pump" width="602" height="800" loading="lazy" class="aspect-square w-full object-cover transition duration-500 group-hover:scale-[1.02] sm:aspect-[16/10] lg:aspect-auto lg:h-[520px]" />
+                <span class="absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-xl bg-white/90 text-navy" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+              </button>
+              <div class="flex flex-col p-6 sm:p-8 lg:p-10">
+                <p class="case-count text-sm font-semibold text-navy/55">Case 1 of 5</p>
+                <h3 class="mt-1 font-display text-[1.75rem] font-extrabold leading-tight sm:text-[2.1rem]">Oil boiler service</h3>
+                <dl class="mt-5 grid gap-4">
+                  <div><dt class="text-sm font-semibold text-navy/55">Patient</dt><dd class="note mt-0.5 text-[26px] text-navy-600">Warmflow oil boiler, Riello burner</dd></div>
+                  <div><dt class="text-sm font-semibold text-navy/55">Treatment</dt><dd class="mt-1 text-[17px] text-navy/85">Opened up and checked over for its annual service.</dd></div>
+                </dl>
+                <span class="stamp mt-7 self-start lg:mt-auto">Discharged</span>
+              </div>
+            </article>
           </li>
-          <li>
-            <button type="button" class="case group relative block w-full overflow-hidden rounded-[22px] bg-navy text-left" data-full="images/work/plant-room.webp" data-caption="Floor-standing boiler, hot water cylinder, pumps, valves and controls in one plant room.">
-              <img src="images/work/plant-room-sm.webp" srcset="images/work/plant-room-sm.webp 800w, images/work/plant-room.webp 1600w" sizes="(min-width: 1024px) 380px, 50vw" alt="Boiler room with a white floor-standing boiler, red expansion vessel, insulated pipework and a hot water cylinder" width="701" height="800" loading="lazy" class="aspect-[4/5] w-full object-cover transition duration-500 group-hover:scale-[1.03]" />
-              <span class="absolute inset-x-2 bottom-2 rounded-xl bg-white/95 px-3 py-2 backdrop-blur sm:inset-x-3 sm:bottom-3 sm:px-4 sm:py-3">
-                <span class="block font-display text-[15px] font-extrabold sm:text-lg">Plant room</span>
-                <span class="hidden text-[15px] text-muted sm:block">Boiler, cylinder, pumps and controls.</span>
-              </span>
-            </button>
+
+          <li class="case-slide w-[86%] shrink-0 snap-start sm:w-full">
+            <article class="grid h-full overflow-hidden rounded-[28px] border-2 border-navy/10 bg-white lg:grid-cols-[1.2fr_1fr]">
+              <button type="button" class="case group relative block overflow-hidden bg-navy" data-full="images/work/unvented-cylinder.webp" data-caption="500 litre hot water cylinder with its expansion vessels.">
+                <img src="images/work/unvented-cylinder-sm.webp" srcset="images/work/unvented-cylinder-sm.webp 800w, images/work/unvented-cylinder.webp 1600w" sizes="(min-width: 1024px) 640px, 90vw" alt="Large grey hot water cylinder with two blue expansion vessels on the wall beside it" width="602" height="800" loading="lazy" class="aspect-square w-full object-cover object-[50%_35%] transition duration-500 group-hover:scale-[1.02] sm:aspect-[16/10] lg:aspect-auto lg:h-[520px]" />
+                <span class="absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-xl bg-white/90 text-navy" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+              </button>
+              <div class="flex flex-col p-6 sm:p-8 lg:p-10">
+                <p class="case-count text-sm font-semibold text-navy/55">Case 2 of 5</p>
+                <h3 class="mt-1 font-display text-[1.75rem] font-extrabold leading-tight sm:text-[2.1rem]">500 litre cylinder</h3>
+                <dl class="mt-5 grid gap-4">
+                  <div><dt class="text-sm font-semibold text-navy/55">Patient</dt><dd class="note mt-0.5 text-[26px] text-navy-600">commercial hot water system</dd></div>
+                  <div><dt class="text-sm font-semibold text-navy/55">Treatment</dt><dd class="mt-1 text-[17px] text-navy/85">Big cylinder with two expansion vessels, all piped up in copper.</dd></div>
+                </dl>
+                <span class="stamp mt-7 self-start lg:mt-auto">Discharged</span>
+              </div>
+            </article>
           </li>
-          <li>
-            <button type="button" class="case group relative block w-full overflow-hidden rounded-[22px] bg-navy text-left" data-full="images/work/kitchen-sink.webp" data-caption="New inset stainless steel sink with a twin-lever swan-neck mixer tap.">
-              <img src="images/work/kitchen-sink-sm.webp" srcset="images/work/kitchen-sink-sm.webp 800w, images/work/kitchen-sink.webp 1600w" sizes="(min-width: 1024px) 380px, 50vw" alt="New stainless steel kitchen sink with a chrome swan-neck mixer tap under a window" width="800" height="757" loading="lazy" class="aspect-[4/5] w-full object-cover transition duration-500 group-hover:scale-[1.03]" />
-              <span class="absolute inset-x-2 bottom-2 rounded-xl bg-white/95 px-3 py-2 backdrop-blur sm:inset-x-3 sm:bottom-3 sm:px-4 sm:py-3">
-                <span class="block font-display text-[15px] font-extrabold sm:text-lg">New sink and tap</span>
-                <span class="hidden text-[15px] text-muted sm:block">Stainless sink, swan-neck mixer.</span>
-              </span>
-            </button>
+
+          <li class="case-slide w-[86%] shrink-0 snap-start sm:w-full">
+            <article class="grid h-full overflow-hidden rounded-[28px] border-2 border-navy/10 bg-white lg:grid-cols-[1.2fr_1fr]">
+              <button type="button" class="case group relative block overflow-hidden bg-navy" data-full="images/work/kitchen-sink.webp" data-caption="New inset stainless steel sink with a twin-lever swan-neck mixer tap.">
+                <img src="images/work/kitchen-sink-sm.webp" srcset="images/work/kitchen-sink-sm.webp 800w, images/work/kitchen-sink.webp 1600w" sizes="(min-width: 1024px) 640px, 90vw" alt="New stainless steel kitchen sink with a chrome swan-neck mixer tap under a window" width="800" height="757" loading="lazy" class="aspect-square w-full object-cover transition duration-500 group-hover:scale-[1.02] sm:aspect-[16/10] lg:aspect-auto lg:h-[520px]" />
+                <span class="absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-xl bg-white/90 text-navy" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+              </button>
+              <div class="flex flex-col p-6 sm:p-8 lg:p-10">
+                <p class="case-count text-sm font-semibold text-navy/55">Case 3 of 5</p>
+                <h3 class="mt-1 font-display text-[1.75rem] font-extrabold leading-tight sm:text-[2.1rem]">New sink and tap</h3>
+                <dl class="mt-5 grid gap-4">
+                  <div><dt class="text-sm font-semibold text-navy/55">Patient</dt><dd class="note mt-0.5 text-[26px] text-navy-600">a kitchen in need of a refresh</dd></div>
+                  <div><dt class="text-sm font-semibold text-navy/55">Treatment</dt><dd class="mt-1 text-[17px] text-navy/85">Inset stainless sink and a twin-lever swan-neck mixer, fitted and plumbed in.</dd></div>
+                </dl>
+                <span class="stamp mt-7 self-start lg:mt-auto">Discharged</span>
+              </div>
+            </article>
           </li>
-          <li>
-            <button type="button" class="case group relative block w-full overflow-hidden rounded-[22px] bg-navy text-left" data-full="images/work/oil-boiler-service.webp" data-caption="Warmflow oil boiler with a Riello burner, opened up for its annual service.">
-              <img src="images/work/oil-boiler-service-sm.webp" srcset="images/work/oil-boiler-service-sm.webp 800w, images/work/oil-boiler-service.webp 1600w" sizes="(min-width: 1024px) 380px, 50vw" alt="Inside a Warmflow oil boiler showing the Riello burner, expansion vessel and pump" width="602" height="800" loading="lazy" class="aspect-[4/5] w-full object-cover transition duration-500 group-hover:scale-[1.03]" />
-              <span class="absolute inset-x-2 bottom-2 rounded-xl bg-white/95 px-3 py-2 backdrop-blur sm:inset-x-3 sm:bottom-3 sm:px-4 sm:py-3">
-                <span class="block font-display text-[15px] font-extrabold sm:text-lg">Oil boiler service</span>
-                <span class="hidden text-[15px] text-muted sm:block">Warmflow with a Riello burner.</span>
-              </span>
-            </button>
+
+          <li class="case-slide w-[86%] shrink-0 snap-start sm:w-full">
+            <article class="grid h-full overflow-hidden rounded-[28px] border-2 border-navy/10 bg-white lg:grid-cols-[1.2fr_1fr]">
+              <button type="button" class="case group relative block overflow-hidden bg-navy" data-full="images/work/plant-room.webp" data-caption="Floor-standing boiler, hot water cylinder, pumps, valves and controls in one plant room.">
+                <img src="images/work/plant-room-sm.webp" srcset="images/work/plant-room-sm.webp 800w, images/work/plant-room.webp 1600w" sizes="(min-width: 1024px) 640px, 90vw" alt="Boiler room with a white floor-standing boiler, red expansion vessel, insulated pipework and a hot water cylinder" width="701" height="800" loading="lazy" class="aspect-square w-full object-cover transition duration-500 group-hover:scale-[1.02] sm:aspect-[16/10] lg:aspect-auto lg:h-[520px]" />
+                <span class="absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-xl bg-white/90 text-navy" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+              </button>
+              <div class="flex flex-col p-6 sm:p-8 lg:p-10">
+                <p class="case-count text-sm font-semibold text-navy/55">Case 4 of 5</p>
+                <h3 class="mt-1 font-display text-[1.75rem] font-extrabold leading-tight sm:text-[2.1rem]">Plant room</h3>
+                <dl class="mt-5 grid gap-4">
+                  <div><dt class="text-sm font-semibold text-navy/55">Patient</dt><dd class="note mt-0.5 text-[26px] text-navy-600">boiler, cylinder and all the bits</dd></div>
+                  <div><dt class="text-sm font-semibold text-navy/55">Treatment</dt><dd class="mt-1 text-[17px] text-navy/85">Floor-standing boiler, hot water cylinder, pumps and controls, with the pipework insulated.</dd></div>
+                </dl>
+                <span class="stamp mt-7 self-start lg:mt-auto">Discharged</span>
+              </div>
+            </article>
           </li>
-          <li>
-            <button type="button" class="case group relative block w-full overflow-hidden rounded-[22px] bg-navy text-left" data-full="images/work/generator-fuel.webp" data-caption="Fuel filters changed on a diesel standby generator.">
-              <img src="images/work/generator-fuel-sm.webp" srcset="images/work/generator-fuel-sm.webp 800w, images/work/generator-fuel.webp 1600w" sizes="(min-width: 1024px) 380px, 50vw" alt="Green diesel generator engine with new fuel filters fitted" width="662" height="800" loading="lazy" class="aspect-[4/5] w-full object-cover transition duration-500 group-hover:scale-[1.03]" />
-              <span class="absolute inset-x-2 bottom-2 rounded-xl bg-white/95 px-3 py-2 backdrop-blur sm:inset-x-3 sm:bottom-3 sm:px-4 sm:py-3">
-                <span class="block font-display text-[15px] font-extrabold sm:text-lg">Standby generator</span>
-                <span class="hidden text-[15px] text-muted sm:block">Fresh fuel filters fitted.</span>
-              </span>
-            </button>
+
+          <li class="case-slide w-[86%] shrink-0 snap-start sm:w-full">
+            <article class="grid h-full overflow-hidden rounded-[28px] border-2 border-navy/10 bg-white lg:grid-cols-[1.2fr_1fr]">
+              <button type="button" class="case group relative block overflow-hidden bg-navy" data-full="images/work/generator-fuel.webp" data-caption="Fuel filters changed on a diesel standby generator.">
+                <img src="images/work/generator-fuel-sm.webp" srcset="images/work/generator-fuel-sm.webp 800w, images/work/generator-fuel.webp 1600w" sizes="(min-width: 1024px) 640px, 90vw" alt="Green diesel generator engine with new fuel filters fitted" width="662" height="800" loading="lazy" class="aspect-square w-full object-cover object-[50%_60%] transition duration-500 group-hover:scale-[1.02] sm:aspect-[16/10] lg:aspect-auto lg:h-[520px]" />
+                <span class="absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-xl bg-white/90 text-navy" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+              </button>
+              <div class="flex flex-col p-6 sm:p-8 lg:p-10">
+                <p class="case-count text-sm font-semibold text-navy/55">Case 5 of 5</p>
+                <h3 class="mt-1 font-display text-[1.75rem] font-extrabold leading-tight sm:text-[2.1rem]">Standby generator</h3>
+                <dl class="mt-5 grid gap-4">
+                  <div><dt class="text-sm font-semibold text-navy/55">Patient</dt><dd class="note mt-0.5 text-[26px] text-navy-600">a diesel standby generator</dd></div>
+                  <div><dt class="text-sm font-semibold text-navy/55">Treatment</dt><dd class="mt-1 text-[17px] text-navy/85">Fresh fuel filters fitted.</dd></div>
+                </dl>
+                <span class="stamp mt-7 self-start lg:mt-auto">Discharged</span>
+              </div>
+            </article>
           </li>
         </ul>
+      </div>
+
+      <div class="wrap mt-6 flex items-center justify-center gap-4">
+        <button type="button" class="case-prev grid h-11 w-11 place-items-center rounded-xl border-2 border-navy/15 bg-white text-navy disabled:opacity-35 sm:hidden" aria-label="Previous case"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+        <div id="case-dots" class="flex items-center gap-2"></div>
+        <button type="button" class="case-next grid h-11 w-11 place-items-center rounded-xl border-2 border-navy/15 bg-white text-navy disabled:opacity-35 sm:hidden" aria-label="Next case"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
       </div>
     </section>
 
@@ -620,8 +796,8 @@
 
     <!-- ============================================================
          CONTACT / BOOK A HOUSE CALL
-         Form posts to FormSubmit → the.plumb.doctor@outlook.com
-         (see README "Before going live" to activate it)
+         Form posts to FormSubmit → toby1@greggs.org FOR NOW (testing).
+         Swap to the client's email before handover — see README.
          ============================================================ -->
     <section id="contact" class="relative overflow-hidden bg-navy py-20 text-white sm:py-24 lg:py-28">
       <div class="wrap grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
@@ -653,7 +829,7 @@
         </div>
 
         <div>
-          <form id="book-form" class="rounded-[28px] bg-white p-6 text-navy shadow-pad sm:p-8" action="https://formsubmit.co/the.plumb.doctor@outlook.com" method="POST" novalidate>
+          <form id="book-form" class="rounded-[28px] bg-white p-6 text-navy shadow-pad sm:p-8" action="https://formsubmit.co/toby1@greggs.org" method="POST" novalidate>
             <input type="hidden" name="_subject" value="New house call request from the website" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
